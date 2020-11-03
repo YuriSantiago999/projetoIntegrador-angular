@@ -1,0 +1,59 @@
+.container-fluid {
+    background-image: url(https://i.imgur.com/55jRn7G.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100vw;
+    height: 100vh;
+
+}
+
+
+form {
+    margin-top: 280px;  
+
+    width: 450px;
+    height: 330px;
+    padding: 10px;
+
+    margin-left: 100px;
+
+    
+    border:solid 2px;
+    border-radius:20px;
+    border-color: gray;
+    
+}
+
+.login {
+    text-align: center;
+    font-size: 25px;
+}
+
+.form-control {
+    border: 1px solid #76E27C;
+}
+
+.bg-color {
+    background-color: white;
+
+
+}
+
+p {
+    font-size: 12px;
+}
+a {
+    color: #76E27C;
+}
+
+
+.btn {
+    margin-left: 35%;
+    background-color: #22C401;
+
+    width: 150px;
+    font-weight: bold;
+
+
+}
