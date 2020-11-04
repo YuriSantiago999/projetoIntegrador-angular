@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.texto{
+    
+   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.parallax{
+    background-image:url(https://i.imgur.com/MkYRgDD.jpg);
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+.bgc{
+    background-color: gray;
+} 
+.f1{
+    font-size: 16pt;
+    font-family: 'Roboto', Arial, helvetica;
+    
+
+
+
+
+}
+
+
+.pr{
+
+    padding-right: 15px;
+}
+
+
+
