@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {faSearch} from '@fortawesome/free-solid-svg-icons'
+
 
 @Component({
   selector: 'app-navbar',
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+  faSearch = faSearch
+
 
   constructor() { }
 
