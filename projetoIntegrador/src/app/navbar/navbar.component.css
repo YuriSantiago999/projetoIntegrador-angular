@@ -3,6 +3,9 @@
     height: 40px;
 }
 
+.navbar {
+    background-color: white !important;
+}
 
 .texto{
     
@@ -11,3 +14,32 @@
     
 }
 
+
+.bl {
+    border-left: none !important;
+}
+
+.br {
+    border-right: none !important;
+}
+
+
+
+.drop-feed {
+    background-color: #ffffff !important;
+    color: black !important;
+}
+
+
+.btn-outline-dark:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+.btn-outline-dark {
+    border-color: gray !important;
+}
+
+.form-control {
+    border-color: gray !important;
+}
