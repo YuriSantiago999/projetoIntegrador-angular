@@ -4,24 +4,25 @@
     background-image: url(https://i.imgur.com/55jRn7G.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-size:100%;   
-    width: 100vw;
-    height: 100vh;
+    background-size:100% 100%;   
+    padding-bottom: 200px;
+    
+    
+  
 
 }
 
 
 form {
     
-    margin-top: 180px;  
-
-    width: 450px;
-    height: 330px;
-    padding: 10px;
-
-    margin-left: 100px;
+     margin-top: 100px;
 
     
+    padding: 10px;
+
+
+  
+
     border:solid 2px;
     border-radius:20px;
     border-color: gray;
