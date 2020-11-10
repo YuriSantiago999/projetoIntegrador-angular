@@ -11,6 +11,8 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     FooterComponent,
     SobreNosComponent,
     CadastrarComponent,
-    NavbarComponent
+    NavbarComponent,
+    PerfilLateralComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,
