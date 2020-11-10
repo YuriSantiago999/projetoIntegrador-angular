@@ -1,14 +1,14 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <div class="row">
-    <div class="col-md-6"><div class="row">
-        <div class="mg1">
-            <h1 class="16px">Sign Up</h1>
+    <div class="col-md-6"><div class="row text-center">
+        <div>
+            <h1>Sign Up</h1>
         </div>
     </div>
 
     <div class="col-md-6 mg">
         <div class="form-group">
-            <label class="text-monospace" for="nome">Nome</label>
+            <label for="nome">Nome</label>
             <input type="text" class="form-control" id="nome" aria-describedby="emailHelp"
             placeholder="Digite o seu nome" [(ngModel)]='usuario.nome'>
         </div>
@@ -16,7 +16,7 @@
 
     <div class="col-md-6 mg">
         <div class="form-group">
-            <label class="text-monospace" for="email">E-mail</label>
+            <label for="email">E-mail</label>
             <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
             placeholder="Digite o seu E-mail" [(ngModel)]='usuario.email'>
         </div>
@@ -24,7 +24,7 @@
 
     <div class="col-md-6 mg">
         <div class="form-group">
-            <label class="text-monospace" for="senha">Senha</label>
+            <label for="senha">Senha</label>
             <input type="password" class="form-control" id="senha" aria-describedby="emailHelp"
             placeholder="Digite a sua senha" (input)='conferirSenha($event)' value='{{senha}}'>
         </div>
@@ -32,16 +32,75 @@
 
     <div class="col-md-6 mg">
         <div class="form-group">
-            <label class="text-monospace" for="senha2">Confirme a senha</label>
+            <label for="senha2">Confirme a senha</label>
             <input type="password" class="form-control" id="senha2" aria-describedby="emailHelp"
             placeholder="Digite novamente a sua senha" [(ngModel)]='usuario.senha'>
         </div>
     </div>
 
     <div class="row mt-5 mb-5">
-        <button type="submit" class="mgb" (click)='cadastrar()'>Cadastrar</button>
+        <button type="submit" class="btn" (click)='cadastrar()'>Cadastrar</button>
     </div></div>
     <div class="col-md-6 m-0 background"></div>
+  </div>
+
+</div> -->
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="form col-md-6">
+        <div class="bg-color d-flex flex-column justify-content-center align-items-center mt-5 pt-5">
+
+          <div class="col-md-9">
+            <div class="form-group">
+              <p class="signup ml-3">Sign Up</p>
+              <label class="" for="ExampleInputNome2">Nome</label>
+              <input type="text" class="form-control" id="nome" aria-describedby="emailHelp"
+              placeholder="Digite seu nome" [(ngModel)]='usuario.nome'>
+              </div>
+          </div>
+
+
+          <div class="col-md-9">
+            <div class="form-group">
+              <label for="ExampleInputEmail2">E-mail</label>
+              <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
+              placeholder="Digite seu email" [(ngModel)]='usuario.email'>
+            </div>
+          </div>
+
+
+          <div class="col-md-9">
+            <div class="form-group">
+              <label for="ExampleInputPassword2">Senha</label>
+              <input type="password" class="form-control" id="senha" aria-describedby="emailHelp"
+              placeholder="Digite sua senha" (input)='conferirSenha($event)' value='{{senha}}'>
+            </div>
+          </div>
+
+
+          <div class="col-md-9">
+            <div class="form-group">
+              <label for="ExampleInputPassword2">Confirme a senha</label>
+              <input type="password" class="form-control" id="senha2" aria-describedby="emailHelp"
+              placeholder="Digite sua senha" [(ngModel)]='usuario.senha'>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="row mt-7 mb-7">
+          <button type="submit" class="btn btn-sucsess" (click)='cadastrar()'>Cadastrar</button>
+        </div>
+
+
+    </div>
+
+    <div class="col-md-6 m-0 background"></div>
+
   </div>
 
 </div>

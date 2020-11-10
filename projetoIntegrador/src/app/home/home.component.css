@@ -12,18 +12,11 @@
 
 
 .form {
-
     margin-top: 180px;
-
-
     padding: 10px;
-
-
-
     border:solid 2px;
     border-radius:20px;
     border-color: gray;
-
 }
 
 .login {
@@ -37,8 +30,6 @@
 
 .bg-color {
     background-color: white;
-
-
 }
 
 p {
@@ -51,12 +42,9 @@ a {
 
 
 .btn {
-    margin-left: 35%;
+    margin-left: 25%;
     background-color: #22C401;
     color: #ffffff;
-
     width: 150px;
     font-weight: bold;
-
-
 }
