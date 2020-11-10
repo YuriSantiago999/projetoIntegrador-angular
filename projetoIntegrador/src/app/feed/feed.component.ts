@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {faDumpster} from '@fortawesome/free-solid-svg-icons'
+import {faGratipay} from '@fortawesome/free-brands-svg-icons'
+
 
 @Component({
   selector: 'app-feed',
@@ -6,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./feed.component.css']
 })
 export class FeedComponent implements OnInit {
+
+  faDumpster = faDumpster
+  faGratipay = faGratipay
 
   constructor() { }
 
