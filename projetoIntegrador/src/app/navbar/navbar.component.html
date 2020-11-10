@@ -8,29 +8,96 @@
     
     <div class="collapse navbar-collapse  w-100 justify-content-center" id="conteudoNavbarSuportado">
       <ul class="navbar-nav text-center">
+        
         <li class="nav-item active">
           <a class="nav-link text-monospace text-uppercase p-3" routerLink="/home">Home <span class="sr-only">(página atual)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-monospace text-uppercase p-3 " routerLink="/feed">Feed</a>
         </li>
+        
       </ul>
+ 
   
       <!--pesquisar-->
-      <!--
-      <div class="input-group mb-3 mt-3 pesquisa">
-        <div class="input-group-prepend w-10">
-          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filtrar</button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Tema</a>
-            <a class="dropdown-item" href="#">Postagem</a>
-            <a class="dropdown-item" href="#">Estado</a>
-          </div>
-        </div>
-        <input type="text" class="form-control" aria-label="Input text com botão dropdown">
-      </div>
-    -->
 
+  <ul class="nav nav-tabs">
+  <li class="nav-item dropdown mr-0">
+    <a class="nav-link dropdown-toggle drop-feed" data-toggle="dropdown" href="#" role="tab" aria-haspopup="true" aria-expanded="false">Filtro</a>
+    <div class="dropdown-menu btn ">
+      <a class="dropdown-item" id="nav-profile-tab" data-toggle="tab" role="tab" href="#minhas-postagens">Postagem</a>
+      <a class="dropdown-item" id="nav-profile-tab" data-toggle="tab" role="tab" href="#postagens-temas">Tema</a>
+      <a class="dropdown-item" id="nav-profile-tab" data-toggle="tab"  role="tab" href="#postagens-estados">Estado</a>
+    
+    </div>
+  </li>
+</ul>
+  
+    <div class="tab-content " id="nav-tabContent">
+      <div class="tab-pane fade show active" id="minhas-postagens" role="tabpanel"
+          aria-labelledby="nav-postagens-tab">
+          <div class="row mt-3 mb-3">
+              <div class="col-md-12 pr-0">
+                <div class="input-group">
+                  <input class="form-control br" type="text" placeholder="Pesquisar postagem"
+                      aria-label="Pesquisar">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-dark bl" type="button" id="button-addon2">
+                          <fa-icon [icon]="faSearch" class="faSearch p-1"></fa-icon>
+                        </button>
+                      </div>
+
+                </div>
+              </div>          
+          </div>
+      </div>
+
+      <div class="tab-pane fade" id="postagens-temas" role="tabpanel"
+      aria-labelledby="nav-presenca-tab">
+
+          <div class="row mt-3 mb-3">
+            <div class="col-md-12 pr-0">
+              <div class="input-group">
+                <input class="form-control br" type="text" placeholder="Pesquisar por tema"
+                    aria-label="Pesquisar">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary bl" type="button" id="button-addon2">
+                        <fa-icon [icon]="faSearch" class="faSearch p-1"></fa-icon>
+                      </button>
+                    </div>
+
+              </div>
+            </div>  
+              
+             
+          </div>
+      </div>
+
+
+      <div class="tab-pane fade" id="postagens-estados" role="tabpanel"
+      aria-labelledby="nav-presenca-tab">
+
+          <div class="row mt-3 mb-3">
+            <div class="col-md-12 pr-0">
+              <div class="input-group">
+                <input class="form-control br" type="text" placeholder="Pesquisar por estado"
+                    aria-label="Pesquisar">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary bl" type="button" id="button-addon2">
+                        <fa-icon [icon]="faSearch" class="faSearch p-1"></fa-icon>
+                      </button>
+                    </div>
+
+              </div>
+            </div>  
+           
+          </div>
+      </div>
+
+
+  </div>
+    
+  
 
       </div>
 
