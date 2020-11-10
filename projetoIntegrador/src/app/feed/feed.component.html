@@ -11,16 +11,17 @@
       <div class="col-md-8">
         <div class="card p-2">
           <div class="text-right">
-            
-            
-              <button class="btn btn-outline-dark border-0 " type="button" id="button-addon2">
-                <fa-icon [icon]="faDumpster" class="faDumpster"></fa-icon>
+            <button class="btn btn-outline-info border-0 " type="button" id="button-addon2">
+              <fa-icon [icon]="faPen" class="faPen "></fa-icon>
+            </button>
+              <button class="btn btn-outline-info border-0 " type="button" id="button-addon2">
+                <fa-icon [icon]="faDumpster" class="faDumpster "></fa-icon>
               </button>
           </div>
           <div class="card-body">
             <div class="row">
               <div class="col-md-12 d-flex justify-content-start">
-                <h4>Tema</h4>
+                <h4>Tema </h4> <p class="ml-2 mt-1">Testando</p>
               </div>
             </div>
             <div class="row">
@@ -57,12 +58,15 @@
             </p>
           </div>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer">
             <div class="row">
               <div class="col-md-6 d-flex justify-content-start">
-                <p class="align-middle">Post em</p>
+                <small id="texto" class="form-text mt-4 text-muted  text-monospace">
+                  Postado em 
+              </small>
               </div>
               <div class="col-md-6 d-flex justify-content-end">
+                <span class="mr-2 mt-2 text-danger font-weight-bold">1000000</span>
                 <button type="button" class="btn btn-danger rounded-circle" data-toggle="button" aria-pressed="false" autocomplete="off">
                   <fa-icon [icon]="faGratipay" class="faGratipay"></fa-icon>
                 </button>
@@ -73,9 +77,6 @@
           </div>
         </div>
       </div>
-
-
-      
       <!-- /Fedd de Cards -->
     </div>
   </div>
