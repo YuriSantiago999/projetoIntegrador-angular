@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faUserCog } from '@fortawesome/free-solid-svg-icons';
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-perfil-lateral',
@@ -7,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilLateralComponent implements OnInit {
 
+  faUserCog = faUserCog
+  faTimesCircle = faTimesCircle
+  
   constructor() { }
 
   ngOnInit(): void {
