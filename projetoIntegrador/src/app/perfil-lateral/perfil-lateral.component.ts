@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import{faUserCog} from '@fortawesome/free-solid-svg-icons';
+import{faListAlt} from '@fortawesome/free-solid-svg-icons';
+import{faPlusSquare} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-perfil-lateral',
@@ -7,8 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilLateralComponent implements OnInit {
 
-  constructor() { }
-
+  faUserCog = faUserCog
+  faListAlt = faListAlt
+  faPlusSquare = faPlusSquare
+  constructor() {}
   ngOnInit(): void {
   }
 
