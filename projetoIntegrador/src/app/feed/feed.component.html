@@ -2,76 +2,90 @@
   <div class="container">
     <div class="row">
       <!-- Perfil Lateral -->
-      <div class="cold-md-4">
+      <div class="col-md-4">
         <app-perfil-lateral></app-perfil-lateral>
       </div>
       <!-- /Perfil Lateral -->
 
       <!-- Feed de Cards -->
       <div class="col-md-8">
-        <div class="card p-2">
+        <div class="card p-2 " *ngFor='let item of listaPostagens'>
           <div class="text-right">
             <button class="btn btn-outline-info border-0 " type="button" id="button-addon2">
               <fa-icon [icon]="faPen" class="faPen "></fa-icon>
             </button>
-              <button class="btn btn-outline-info border-0 " type="button" id="button-addon2">
-                <fa-icon [icon]="faDumpster" class="faDumpster "></fa-icon>
-              </button>
+            <button class="btn btn-outline-info border-0 " type="button" id="button-addon2">
+              <fa-icon [icon]="faDumpster" class="faDumpster "></fa-icon>
+            </button>
           </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-12 d-flex justify-content-start">
-                <h4>Tema </h4> <p class="ml-2 mt-1">Testando</p>
+          <div class="card-body mb-2">
+            <div class="row mb-3">
+              <div class="col-md-6 d-flex justify-content-start ">
+                <h4 class="texto">Tema</h4>
+                <h5 class="ml-3 mt-1 mb-1 texto2">{{item.tema.tema}}</h5>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6 d-flex justify-content-start">
-                <h5>Categoria</h5>
+                <h5 class="texto">Categoria </h5>
+                <h5 class="ml-3 texto2">{{item.tema.categoria}}</h5>
               </div>
-              <div class="col-md-6 align-self-end">
-                <h5 class="text-right " >Estado</h5>
+              <div class="col-md-6 d-flex justify-content-end">
+                <h5 class="texto">Estado </h5>
+                <h5 class="ml-3 texto2">{{item.tema.estado}}</h5>
               </div>
             </div>
-              
-            
+
+
             <hr>
 
-            <div class="row mb-1">
+            <div class="row">
+
               <div class="col-md-6 d-flex justify-content-start">
-                <h5>Link Externo </h5>
+                <a href="{{item.linkExterno}}" target="_blank">
+                  <h6 class="texto text-info">Link Externo</h6>
+                </a>
               </div>
 
               <div class="col-md-6 d-flex justify-content-end">
-                <h5>Link Imagem </h5>
+                <a href="{{item.imagem}}" target="_blank">
+                  <h6 class="texto text-info">Link Imagem</h6>
+                </a>
               </div>
+
+
             </div>
-            <div class="row mb-1">
+            <hr>
+
+
+
+            <div class="row mb-2">
               <div class="col-md-12 d-flex justify-content-start">
-                <h5>Postagem</h5>
+                <h5 class="texto">Postagem</h5>
               </div>
             </div>
 
             <div class="border rounded ">
-            <p class="card-text p-2">
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolorum distinctio itaque, iste officia autem, mollitia, repellendus earum temporibus ut eum sunt consequuntur quibusdam! Ab labore explicabo molestias. Obcaecati, totam.
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quasi accusantium nobis cupiditate architecto sint inventore id atque ipsum expedita libero, amet repellendus minus iusto voluptatum explicabo neque modi! Aspernatur.
-            </p>
-          </div>
+              <p class="card-text p-2">
+                {{item.postagem}}
+              </p>
+            </div>
           </div>
           <div class="card-footer">
             <div class="row">
               <div class="col-md-6 d-flex justify-content-start">
                 <small id="texto" class="form-text mt-4 text-muted  text-monospace">
-                  Postado em 
-              </small>
+                  Postado em {{item.data}}
+                </small>
               </div>
               <div class="col-md-6 d-flex justify-content-end">
-                <span class="mr-2 mt-2 text-danger font-weight-bold">1000000</span>
-                <button type="button" class="btn btn-danger rounded-circle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                <span class="mr-2 mt-2 text-danger font-weight-bold">{{item.curtida}}</span>
+                <button type="button" class="btn btn-danger rounded-circle" data-toggle="button" aria-pressed="false"
+                  autocomplete="off">
                   <fa-icon [icon]="faGratipay" class="faGratipay"></fa-icon>
                 </button>
 
-                
+
               </div>
             </div>
           </div>
