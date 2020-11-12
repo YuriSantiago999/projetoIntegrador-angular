@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
   <fa-icon [icon]="faListAlt" class="fa 3x"></fa-icon>
@@ -72,3 +73,68 @@
     </div>
   </div>
 </div>
+=======
+<!-- Botão para acionar modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
+    Abrir modal de demonstração
+</button>
+
+  <!-- Modal -->
+  <div class="modal fade bgModal"  id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content bgModal2" >
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado" >Dados Pessoais <fa-icon [icon] = "faUserCog"></fa-icon></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <fa-icon [icon] = "faTimesCircle" class="text-white"></fa-icon>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="col-md-10">
+                        <div class="form-group">
+                            <label class="text-white" for="ExampleInputNome2">Nome</label>
+                            <input type="text" class="form-control" id="nome" aria-describedby="emailHelp"
+                            placeholder="Digite seu nome">
+                        </div>
+                    </div>
+    
+    
+                    <div class="col-md-10">
+                        <div class="form-group">
+                            <label class="text-white" for="ExampleInputEmail2">E-mail</label>
+                            <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
+                            placeholder="Digite seu email">
+                        </div>
+                    </div>
+    
+    
+                    <div class="col-md-10">
+                        <div class="form-group">
+                            <label class="text-white" for="ExampleInputPassword2">Senha</label>
+                            <input type="password" class="form-control" id="senha" aria-describedby="emailHelp"
+                            placeholder="Digite sua senha">
+                        </div>
+                    </div>
+    
+    
+                    <div class="col-md-10">
+                        <div class="form-group">
+                            <label class="text-white" for="ExampleInputPassword2">Confirme a senha</label>
+                            <input type="password" class="form-control" id="senha2" aria-describedby="emailHelp"
+                            placeholder="Digite sua senha">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Botão para salvar -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sucsses" data-dismiss="modal">Salvar</button>
+                </div>
+
+            </div>
+        </div>
+  </div>
+>>>>>>> dadosPessoais

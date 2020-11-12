@@ -2,9 +2,14 @@ import { TemaService } from './../service/tema.service';
 import { PostagemService } from './../service/postagem.service';
 import { Tema } from './../model/Tema';
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { faListAlt, faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import { getAllStates} from "easy-location-br";
 import { Postagem } from '../model/Postagem';
+=======
+import { faUserCog } from '@fortawesome/free-solid-svg-icons';
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
+>>>>>>> dadosPessoais
 
 @Component({
   selector: 'app-perfil-lateral',
@@ -13,7 +18,14 @@ import { Postagem } from '../model/Postagem';
 })
 export class PerfilLateralComponent implements OnInit {
 
+<<<<<<< HEAD
   postagem: Postagem = new Postagem();
+=======
+  faUserCog = faUserCog
+  faTimesCircle = faTimesCircle
+  
+  constructor() { }
+>>>>>>> dadosPessoais
 
 
   tema: Tema = new Tema();
