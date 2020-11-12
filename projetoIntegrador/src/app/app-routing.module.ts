@@ -1,4 +1,3 @@
-import { FeedComponent } from './feed/feed.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { notStrictEqual } from 'assert';
@@ -16,16 +15,9 @@ const routes: Routes = [
   { path: 'sobre-nos', component: SobreNosComponent },
   // Rota para a página de cadastro
   { path: 'cadastrar', component: CadastrarComponent },
-<<<<<<< HEAD
   // Rota para a página feed
   { path: 'feed', component: FeedComponent }
 
-=======
-  // Rota para o Feed
-  {path: 'feed' , component : FeedComponent}
-
-  
->>>>>>> feed
 ];
 
 @NgModule({

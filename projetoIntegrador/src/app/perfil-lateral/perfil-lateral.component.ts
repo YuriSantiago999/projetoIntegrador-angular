@@ -15,10 +15,10 @@ import { faUserCog } from '@fortawesome/free-solid-svg-icons';
 export class PerfilLateralComponent implements OnInit {
 
   postagem: Postagem = new Postagem();
-  faUserCog = faUserCog
-  faTimesCircle = faTimesCircle
+  listaPostagens: Postagem[];
 
-  // constructor() { }
+  faUserCog = faUserCog;
+  faTimesCircle = faTimesCircle;
 
 
   tema: Tema = new Tema();
@@ -56,21 +56,27 @@ export class PerfilLateralComponent implements OnInit {
         this.postagem = resp;
         this.postagem = new Postagem();
         alert('Postagem realizada com sucesso!');
-        // this.findAllPostagens();
+        this.findAllPostagens();
       })
     }
   }
 
-      findAllTemas() {
-        this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
-          this.listaTemas = resp;
-        })
-      }
+  findAllTemas() {
+    this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
+      this.listaTemas = resp;
+    })
+  }
 
-      findByIdTema() {
-        this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
-          this.tema = resp;
-        })
-      }
+  findByIdTema() {
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
+      this.tema = resp;
+    });
+  }
+
+  findAllPostagens() {
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp;
+    });
+  }
 
 }
