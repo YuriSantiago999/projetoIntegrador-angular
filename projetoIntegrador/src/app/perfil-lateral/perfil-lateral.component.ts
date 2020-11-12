@@ -1,7 +1,7 @@
 import { TemaService } from './../service/tema.service';
 import { PostagemService } from './../service/postagem.service';
 import { Tema } from './../model/Tema';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 import { faListAlt, faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import { getAllStates} from "easy-location-br";
 import { Postagem } from '../model/Postagem';
@@ -14,12 +14,13 @@ import { faUserCog } from '@fortawesome/free-solid-svg-icons';
 })
 export class PerfilLateralComponent implements OnInit {
 
+
   postagem: Postagem = new Postagem();
   listaPostagens: Postagem[];
 
-  faUserCog = faUserCog;
-  faTimesCircle = faTimesCircle;
-
+  faUserCog = faUserCog
+  faTimesCircle = faTimesCircle
+  faListAlt = faListAlt;
 
   tema: Tema = new Tema();
   listaTemas: Tema[];
@@ -28,7 +29,6 @@ export class PerfilLateralComponent implements OnInit {
   estados = [];
   estadoId: string;
 
-  faListAlt = faListAlt;
 
   constructor(
     private postagemService: PostagemService,

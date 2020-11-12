@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { notStrictEqual } from 'assert';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
-import { FeedComponent } from './feed/feed.component';
+
 import { HomeComponent } from './home/home.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
@@ -18,6 +18,10 @@ const routes: Routes = [
   // Rota para a página feed
   { path: 'feed', component: FeedComponent }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4c0156103b4683dabb306b862aa1fd75e1264320
 ];
 
 @NgModule({
