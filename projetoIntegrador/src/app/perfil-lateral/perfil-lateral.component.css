@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+.bgModal {
+    background: rgba(2, 129, 116, .8);
+  }
+  .bgModal2 {
+    background: rgba(2, 129, 116, .1);
+    border: none;
+  }

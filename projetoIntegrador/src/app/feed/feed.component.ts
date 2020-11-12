@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Tema } from '../model/Tema';
+import { TemaService } from '../service/tema.service';
 
 @Component({
   selector: 'app-feed',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./feed.component.css']
 })
 export class FeedComponent implements OnInit {
+  
 
-  constructor() { }
+  constructor(
+   
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    window.scroll(0,0)
+    
   }
+
+ 
 
 }
