@@ -17,4 +17,13 @@ export class AuthService {
   cadastrar(usuario: Usuario) {
     return this.http.post('http://localhost:8080/usuarios/cadastrar', usuario);
   }
+
+  navbarOk() {
+    let ok = true;
+    let token = localStorage.getItem('token');
+    if (token == null) {
+      ok = false;
+    }
+    return ok;
+  }
 }

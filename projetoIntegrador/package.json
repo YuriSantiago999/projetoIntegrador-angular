@@ -25,6 +25,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "bootstrap": "^4.5.3",
+    "easy-location-br": "^1.0.9",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",

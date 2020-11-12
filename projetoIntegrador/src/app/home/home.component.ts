@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
       this.usuarioLogin = resp;
       console.log("oi");
       localStorage.setItem('token', this.usuarioLogin.token);
-      this.router.navigate(['/sobre-nos']);
+      this.router.navigate(['/feed']);
     });
   }
 
