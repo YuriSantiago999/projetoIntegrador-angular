@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
-h5 {
-<<<<<<< HEAD
+/*h5 {
+  <<<<<<< HEAD
   font-family: 'Space Mono', 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-weight: bold;
   color: #ffffff;
-}
+}*/
 
 label {
   font-weight: bold;
@@ -25,12 +25,14 @@ label {
   background: rgba(2, 129, 116, .1);
   border: none;
 }
-=======
-    font-family: 'space mono';
+/*=======*/
+/*
+  h5 {
+  font-family: 'space mono';
     font-size: 24px;
     color: #ffffff;
     margin-left: 20%;
-}
+} */
 
 .bgModal {
     background: rgba(2, 129, 116, .8);
@@ -57,4 +59,6 @@ label {
 .modal-body {
     margin-left: 10%;
 }
->>>>>>> dadosPessoais
+
+/*
+>>>>>>> dadosPessoais*/
