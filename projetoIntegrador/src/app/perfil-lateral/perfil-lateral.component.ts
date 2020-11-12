@@ -7,7 +7,6 @@ import { getAllStates} from "easy-location-br";
 import { Postagem } from '../model/Postagem';
 import { faUserCog } from '@fortawesome/free-solid-svg-icons';
 
-
 @Component({
   selector: 'app-perfil-lateral',
   templateUrl: './perfil-lateral.component.html',
@@ -15,12 +14,13 @@ import { faUserCog } from '@fortawesome/free-solid-svg-icons';
 })
 export class PerfilLateralComponent implements OnInit {
 
+
   postagem: Postagem = new Postagem();
+  listaPostagens: Postagem[];
+
   faUserCog = faUserCog
   faTimesCircle = faTimesCircle
-  
-  
-
+  faListAlt = faListAlt;
 
   tema: Tema = new Tema();
   listaTemas: Tema[];
@@ -29,7 +29,7 @@ export class PerfilLateralComponent implements OnInit {
   estados = [];
   estadoId: string;
 
-  faListAlt = faListAlt;
+  
 
 
   constructor(
@@ -58,21 +58,27 @@ export class PerfilLateralComponent implements OnInit {
         this.postagem = resp;
         this.postagem = new Postagem();
         alert('Postagem realizada com sucesso!');
-        // this.findAllPostagens();
+        this.findAllPostagens();
       })
     }
   }
 
-      findAllTemas() {
-        this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
-          this.listaTemas = resp;
-        })
-      }
+  findAllTemas() {
+    this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
+      this.listaTemas = resp;
+    })
+  }
 
-      findByIdTema() {
-        this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
-          this.tema = resp;
-        })
-      }
+  findByIdTema() {
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
+      this.tema = resp;
+    });
+  }
+
+  findAllPostagens() {
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp;
+    });
+  }
 
 }

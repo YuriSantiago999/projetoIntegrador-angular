@@ -23,7 +23,7 @@ import { FeedComponent } from './feed/feed.component';
     CadastrarComponent,
     NavbarComponent,
     PerfilLateralComponent,
-    FeedComponent
+    FeedComponent,
   ],
   imports: [
     BrowserModule,

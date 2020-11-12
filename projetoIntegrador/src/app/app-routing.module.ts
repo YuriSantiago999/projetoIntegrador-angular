@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { notStrictEqual } from 'assert';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { FeedComponent } from './feed/feed.component';
+
 import { HomeComponent } from './home/home.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
