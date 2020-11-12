@@ -5,6 +5,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { FeedComponent } from './feed/feed.component';
 
 import { HomeComponent } from './home/home.component';
+import { PutDadosPessoaisComponent } from './put-dados-pessoais/put-dados-pessoais.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 const routes: Routes = [
@@ -17,7 +18,9 @@ const routes: Routes = [
   // Rota para a página de cadastro
   { path: 'cadastrar', component: CadastrarComponent },
   // Rota para a página feed
-  { path: 'feed', component: FeedComponent }
+  { path: 'feed', component: FeedComponent },
+  // Rota para modal de dados pessoais
+  { path: 'edita-dados/:id', component: PutDadosPessoaisComponent },
 
 ];
 

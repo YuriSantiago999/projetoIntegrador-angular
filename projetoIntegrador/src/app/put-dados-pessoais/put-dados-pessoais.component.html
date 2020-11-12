@@ -1,0 +1,56 @@
+<div class="container">
+
+    <div class="row mt-5 mb-5">
+        <div class="col-md-4">
+          <app-perfil-lateral></app-perfil-lateral>
+        </div>
+        <div class="col-md-8">
+  
+            <div>
+                <!--Copiei do perfil lateral-->
+                <div class="col-md-10">
+                    <div class="form-group">
+                        <label class="text-white" for="nome"> Nome </label>
+                        <input type="text" class="form-control" id="nome" aria-describedby="emailHelp"
+                        placeholder="Digite seu nome" [(ngModel)]="dadoPessoal.nome">
+                    </div>    
+                </div>
+
+                <!--Copiei do perfil lateral-->
+                <div class="col-md-10">
+                    <div class="form-group">
+                        <label class="text-white" for="ExampleInputEmail2">E-mail</label>
+                        <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
+                        placeholder="Digite seu email">
+                    </div>
+                </div>
+  
+                <!--Copiei do perfil lateral-->
+                <div class="col-md-10">
+                    <div class="form-group">
+                        <label class="text-white" for="ExampleInputPassword2">Senha</label>
+                        <input type="password" class="form-control" id="senha" aria-describedby="emailHelp"
+                        placeholder="Digite sua senha">
+                    </div>
+                </div>
+            
+
+                 <!--Copiei do perfil lateral-->
+                <div class="col-md-10">
+                    <div class="form-group">
+                        <label class="text-white" for="ExampleInputPassword2">Confirme a senha</label>
+                        <input type="password" class="form-control" id="senha2" aria-describedby="emailHelp"
+                        placeholder="Digite sua senha">
+                    </div>
+                </div>
+  
+                <div class="d-flex justify-content-end mt-3">
+                    <button type="button" class="btn btn-outline-info w-25" (click)="salvar()">Salvar</button>
+                </div>
+            </div>
+  
+        </div>
+  
+    </div>
+  </div>
+  
