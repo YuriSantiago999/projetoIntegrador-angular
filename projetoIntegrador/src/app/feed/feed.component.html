@@ -8,40 +8,13 @@
       <!-- /Perfil Lateral -->
 
       <!-- Feed de Cards -->
-      <div class="col-md-8">
+      <div class="col-md-8 mb-2">
         <div class="card p-2 " *ngFor='let item of listaPostagens'>
           <div class="text-right">
             <button class="btn btn-outline-info border-0 " type="button" id="button-addon2" [routerLink]="['/edita-post', item.id]">
               <fa-icon [icon]="faPen" class="faPen "></fa-icon>
             </button>
-
-
-
-            <!-- Button putPostagem modal -->
-            <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-              <fa-icon [icon]="faListAlt"></fa-icon>
-            </button> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <button class="btn btn-outline-info border-0 " type="button" id="button-addon2">
+            <button class="btn btn-outline-info border-0 " type="button" id="button-addon2" [routerLink]="['/deleta-post', item.id]">
               <fa-icon [icon]="faDumpster" class="faDumpster "></fa-icon>
             </button>
           </div>
@@ -63,7 +36,6 @@
               </div>
             </div>
 
-
             <hr>
 
             <div class="row">
@@ -79,7 +51,6 @@
                   <h6 class="texto text-info">Link Imagem</h6>
                 </a>
               </div>
-
 
             </div>
             <hr>

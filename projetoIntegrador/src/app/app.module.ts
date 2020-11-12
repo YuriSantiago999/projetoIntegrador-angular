@@ -14,6 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
 import { FeedComponent } from './feed/feed.component';
 import { PutPostagemComponent } from './put-postagem/put-postagem.component';
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PutPostagemComponent } from './put-postagem/put-postagem.component';
     NavbarComponent,
     PerfilLateralComponent,
     FeedComponent,
-    PutPostagemComponent
+    PutPostagemComponent,
+    DeletePostagemComponent
   ],
   imports: [
     BrowserModule,

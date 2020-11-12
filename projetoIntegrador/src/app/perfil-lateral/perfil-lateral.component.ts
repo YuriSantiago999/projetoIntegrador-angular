@@ -32,7 +32,7 @@ export class PerfilLateralComponent implements OnInit {
 
   constructor(
     private postagemService: PostagemService,
-    private temaService: TemaService
+    private temaService: TemaService,
   ) { }
 
   ngOnInit() {
@@ -57,7 +57,7 @@ export class PerfilLateralComponent implements OnInit {
         this.postagem = new Postagem();
         alert('Postagem realizada com sucesso!');
         this.findAllPostagens();
-      })
+      });
     }
   }
 

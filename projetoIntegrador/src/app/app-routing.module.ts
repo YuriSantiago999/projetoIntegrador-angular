@@ -1,3 +1,4 @@
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
 import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -20,7 +21,9 @@ const routes: Routes = [
   // Rota para a página feed
   { path: 'feed', component: FeedComponent },
   // Rota para a página edita post
-  { path: 'edita-post/:id', component: PutPostagemComponent }
+  { path: 'edita-post/:id', component: PutPostagemComponent },
+  // Rota para a página edita post
+  { path: 'deleta-post/:id', component: DeletePostagemComponent }
 
 ];
 
