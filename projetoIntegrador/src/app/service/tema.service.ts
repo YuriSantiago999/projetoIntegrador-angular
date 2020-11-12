@@ -8,6 +8,7 @@ export class TemaService {
 
   constructor(private http: HttpClient) { }
 
+<<<<<<< HEAD
   token = {
     headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
   }
@@ -21,3 +22,16 @@ export class TemaService {
   }
 
 }
+=======
+
+  token = {
+    headers: new HttpHeaders().set('Authorization',localStorage.getItem('token'))
+  }
+
+  getAllTemas() {
+    return this.http.get('http://localhost:8080/tema',this.token)
+  }
+
+  
+}
+>>>>>>> feed

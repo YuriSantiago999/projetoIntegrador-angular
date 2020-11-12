@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { notStrictEqual } from 'assert';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { FeedComponent } from './feed/feed.component';
 import { HomeComponent } from './home/home.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
@@ -15,9 +16,16 @@ const routes: Routes = [
   { path: 'sobre-nos', component: SobreNosComponent },
   // Rota para a página de cadastro
   { path: 'cadastrar', component: CadastrarComponent },
+<<<<<<< HEAD
   // Rota para a página feed
   { path: 'feed', component: FeedComponent }
 
+=======
+  // Rota para o Feed
+  {path: 'feed' , component : FeedComponent}
+
+  
+>>>>>>> feed
 ];
 
 @NgModule({
