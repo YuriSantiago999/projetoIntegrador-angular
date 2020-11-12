@@ -31,12 +31,11 @@ export class FeedComponent implements OnInit {
     private temaService: TemaService
   ) { }
 
-  ngOnInit(): void {
-    window.scroll(0,0);
+  ngOnInit() {
+    window.scroll(0, 0);
 
     this.findAllPostagens();
     this.findAllTemas();
-    
   }
 
   findAllPostagens() {

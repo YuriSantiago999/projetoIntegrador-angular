@@ -2,13 +2,9 @@
 
 
 h5 {
-<<<<<<< HEAD
-=======
-  
->>>>>>> 4c0156103b4683dabb306b862aa1fd75e1264320
   font-family: 'Space Mono', 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 24px;
-  
+
   font-weight: bold;
   color: #ffffff;
 }
@@ -30,15 +26,6 @@ label {
   background: rgba(2, 129, 116, .1);
   border: none;
 }
-<<<<<<< HEAD
-    /* font-family: 'space mono';
-    font-size: 24px;
-    color: #ffffff;
-    margin-left: 20%;
-} */
-=======
-
->>>>>>> 4c0156103b4683dabb306b862aa1fd75e1264320
 
 .bgModal {
     background: rgba(2, 129, 116, .8);
