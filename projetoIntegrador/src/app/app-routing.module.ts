@@ -1,3 +1,4 @@
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { notStrictEqual } from 'assert';
@@ -17,7 +18,9 @@ const routes: Routes = [
   // Rota para a página de cadastro
   { path: 'cadastrar', component: CadastrarComponent },
   // Rota para a página feed
-  { path: 'feed', component: FeedComponent }
+  { path: 'feed', component: FeedComponent },
+  // Rota para a página edita post
+  { path: 'edita-post/:id', component: PutPostagemComponent }
 
 ];
 

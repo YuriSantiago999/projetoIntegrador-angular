@@ -1,7 +1,7 @@
 import { TemaService } from './../service/tema.service';
 import { PostagemService } from './../service/postagem.service';
 import { Tema } from './../model/Tema';
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core';
 import { faListAlt, faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import { getAllStates} from "easy-location-br";
 import { Postagem } from '../model/Postagem';
