@@ -1,6 +1,8 @@
+
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Tema } from '../model/Tema';
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +16,7 @@ export class TemaService {
   }
   
   postTema(tema:Tema){
-    return this.http.post('http://localhost:8080/tema',this.token  )
+    return this.http.post('http://localhost:8080/tema',this.token)
 
   }
   

@@ -17,15 +17,15 @@
         <!-- Campos de Postagem -->
         <div class="form-group">
           <label for="ExampleInputNome2">Tema</label>
-          <input type="text" class="form-control borderInput" id="Tema" aria-describedby="emailHelp"
-          placeholder="Escolha um tema"[(ngModel)]='tema.titulo'>
+          <input type="text" class="form-control borderInput" id="tema" aria-describedby="emailHelp"
+          placeholder="Digite o título do tema..."[(ngModel)]='tema.tema'>
         </div>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
               <label for="ExampleInputNome2">Categoria</label>
               <input type="text" class="form-control borderInput" id="categoria" aria-describedby="emailHelp"
-              placeholder="Digite uma categoria"[(ngModel)]='categoria.titulo'>
+              placeholder="Digite uma categoria"[(ngModel)]='tema.categoria'>
             </div>
           </div>
           <div class="col-md-6">
@@ -37,7 +37,7 @@
             </div>
           </div>
         </div>
-        <div class="form-group">
+        <!--div class="form-group">
           <label for="ExampleInputNome2">Link Externo</label>
           <input type="text" class="form-control borderInput" id="linkExterno" aria-describedby="emailHelp"
           placeholder="Cole o URL externo">
@@ -50,12 +50,12 @@
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Postagem</label>
           <textarea class="form-control borderInput" id="exampleFormControlTextarea1" rows="3"
-          placeholder="Escreva seu post"></textarea>
-        </div>
+          placeholder="Escreva seu post"[(ngModel)]="tema.postagem"></textarea>
+        </div-->
       </div>
       <!-- /Campos de postagem -->
       <div class="modal-footer d-flex justify-content-center">
-        <button type="button" class="btn btn-success" data-dismiss="modal">Postar</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal"(click)='postar()'>Postar</button>
       </div>
     </div>
   </div>
