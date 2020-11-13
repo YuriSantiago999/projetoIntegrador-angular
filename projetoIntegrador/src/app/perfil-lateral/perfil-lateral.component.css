@@ -2,10 +2,9 @@
 
 
 h5 {
-  
   font-family: 'Space Mono', 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 24px;
-  
+
   font-weight: bold;
   color: #ffffff;
 }
@@ -27,7 +26,6 @@ label {
   background: rgba(2, 129, 116, .1);
   border: none;
 }
-
 
 .bgModal {
     background: rgba(2, 129, 116, .8);
