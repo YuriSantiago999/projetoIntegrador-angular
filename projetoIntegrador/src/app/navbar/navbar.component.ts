@@ -5,6 +5,7 @@ import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { TemaService } from '../service/tema.service';
 import { PostagemService } from '../service/postagem.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -21,13 +22,18 @@ export class NavbarComponent implements OnInit {
 
 
   constructor(
-    public auth: AuthService
+    public auth: AuthService,
+    private router: Router
+ 
   ) { }
 
   ngOnInit(): void {
   }
 
-
+  sair(){
+    localStorage.clear()
+    this.router.navigate(['/home'])
+  }
 
 
 }

@@ -8,12 +8,18 @@
     <div class="collapse navbar-collapse  w-100 justify-content-center" id="conteudoNavbarSuportado">
       <ul class="navbar-nav text-center">
 
-        <li class="nav-item active">
-          <a class="nav-link text-monospace text-uppercase p-3" routerLink="/home">Home <span class="sr-only">(página atual)</span></a>
+        <li class="nav-item ">
+          <a class="nav-link texto text-monospace text-uppercase p-3" routerLink="/home">Home <span class="sr-only">(página atual)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-monospace text-uppercase p-3 " routerLink="/feed">Feed</a>
+          <a class="nav-link texto text-monospace text-uppercase p-3 " routerLink="/feed">Feed</a>
         </li>
+
+        <div *ngIf='auth.btnSair()'>
+        <li class="nav-item">
+          <a class="nav-link texto text-monospace text-uppercase p-3 " (click)='sair()'>Sair</a>
+        </li>
+      </div>
 
       </ul>
 

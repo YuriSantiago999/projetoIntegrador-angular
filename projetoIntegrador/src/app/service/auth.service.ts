@@ -26,4 +26,33 @@ export class AuthService {
     }
     return ok;
   }
+  
+  btnSair(){
+      let ok = false
+      let token = localStorage.getItem('token')
+
+      if(token != null){
+      ok = true
+      }
+
+      return ok
+  }
+
+  btnLogin(){
+
+    let ok = false
+    let token = localStorage.getItem('token')
+
+    if(token == null){
+    ok = true
+    }
+
+    return ok
+
+
+  }
+
+
+
+
 }
