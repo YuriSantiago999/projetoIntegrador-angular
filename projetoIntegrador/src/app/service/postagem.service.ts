@@ -21,9 +21,9 @@ export class PostagemService {
     return this.http.post('http://localhost:8080/postagens', postagem, this.token);
   }
 
-  getByTituloPostagem(postNome : string) {
-    return this.http.get(`http://localhost:8080/postagens/postagens/${postNome}`, this.token)
+  getByPalavraPostagem(palavra : string) {
+    return this.http.get(`http://localhost:8080/postagens/palavra/${palavra}`, this.token)
   }
   
-  
+ 
 }

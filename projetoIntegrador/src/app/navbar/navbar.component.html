@@ -18,15 +18,15 @@
       </ul>
 
 
-      <!--pesquisar-->
+      <!--pesquisar
 
   <ul class="nav nav-tabs text-right">
   <li class="nav-item dropdown mr-0">
     <a class="nav-link dropdown-toggle drop-feed " data-toggle="dropdown"  role="button" aria-haspopup="true" href="#" aria-expanded="false">Filtro</a>
     <div class="dropdown-menu ">
-      <a class="dropdown-item" id="nav-profile-tab" data-toggle="tab" role="tab" href="#minhas-postagens">Postagem</a>
-      <a class="dropdown-item" id="nav-profile-tab" data-toggle="tab" role="tab" href="#postagens-temas">Tema</a>
-      <a class="dropdown-item" id="nav-profile-tab" data-toggle="tab"  role="tab" href="#postagens-estados">Estado</a>
+      <a class="dropdown-item nav-link" id="nav-profile-tab" data-toggle="tab" role="tab" href="#minhas-postagens">Postagem</a>
+      <a class="dropdown-item nav-link" id="nav-profile-tab" data-toggle="tab" role="tab" href="#postagens-temas">Tema</a>
+      <a class="dropdown-item nav-link" id="nav-profile-tab" data-toggle="tab"  role="tab" href="#postagens-estados">Estado</a>
 
     </div>
   </li>
@@ -46,7 +46,7 @@
                       aria-label="Pesquisar" [(ngModel)]='postNome'>
                       <div class="input-group-append">
                         <button class="btn btn-outline-dark bl" type="button" id="button-addon2"
-                        (click)='findByTituloPostagem()'>
+                        (click)='findByPostagem()'>
                           <fa-icon [icon]="faSearch" class="faSearch p-1"></fa-icon>
                         </button>
                       </div>
@@ -65,7 +65,8 @@
                 <input class="form-control br" type="text" placeholder="Pesquisar por tema"
                     aria-label="Pesquisar">
                     <div class="input-group-append">
-                      <button class="btn btn-outline-secondary bl" type="button" id="button-addon2">
+                      <button class="btn btn-outline-secondary bl" type="button" id="button-addon2"
+                      >
                         <fa-icon [icon]="faSearch" class="faSearch p-1"></fa-icon>
                       </button>
                     </div>
@@ -96,11 +97,12 @@
             </div>
 
           </div>
+        
       </div>
 
 
   </div>
-
+-->
 
 
       </div>

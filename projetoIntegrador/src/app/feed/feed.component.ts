@@ -6,6 +6,8 @@ import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
+import {faSearch} from '@fortawesome/free-solid-svg-icons'
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,23 +17,40 @@ import { TemaService } from '../service/tema.service';
 })
 export class FeedComponent implements OnInit {
 
+  key =  'data'
+  reverse = true
+
   postagem: Postagem = new Postagem();
   listaPostagens: Postagem[];
+  palavra: string
 
   tema: Tema = new Tema();
   listaTemas: Tema[];
+  nomeTema: string
+  estado: string
 
 
+  faSearch = faSearch
   faDumpster = faDumpster;
   faGratipay = faGratipay;
   faPen = faPen;
 
   constructor(
     private postagemService: PostagemService,
-    private temaService: TemaService
+    private temaService: TemaService,
+    
+    private router: Router
   ) { }
 
   ngOnInit() {
+      
+    let token = localStorage.getItem('token')
+
+    if(token == null) {
+      this.router.navigate(['/home'])
+      alert('Faça o Login antes de entrar no Feed !!')
+    }
+
     window.scroll(0, 0);
 
     this.findAllPostagens();
@@ -49,5 +68,37 @@ export class FeedComponent implements OnInit {
       this.listaTemas = resp;
     })
   }
+
+  findByPalavraPostagem(){
+    if(this.palavra === ''){
+      this.findAllPostagens()
+    }else{
+    this.postagemService.getByPalavraPostagem(this.palavra).subscribe((resp: Postagem[]) =>
+    this.listaPostagens = resp
+    )}
+  }
+
+  findByNomeTema(){
+    if(this.nomeTema === ''){
+      this.findAllTemas()
+    }else{
+      this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[])=> {
+        this.listaTemas = resp
+      })
+    }
+
+  }
+
+  findByEstadoTema(){
+    if(this.estado === ''){
+      this.findAllTemas()
+    }else{
+      this.temaService.getByEstadoTema(this.estado).subscribe((resp: Tema[])=> {
+        this.listaTemas = resp
+      })
+    }
+  }
+
+
 
 }

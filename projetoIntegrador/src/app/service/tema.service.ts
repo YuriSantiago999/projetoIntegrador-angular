@@ -20,4 +20,14 @@ export class TemaService {
     return this.http.get(`http://localhost:8080/tema/id/${id}`, this.token)
   }
 
+  getByNomeTema(nome: string) {
+      return this.http.get(`http://localhost:8080/tema/tema/${nome}`, this.token)
+  }
+
+  getByEstadoTema (estado: string) {
+    return this.http.get(`http://localhost:8080/tema/estado/${estado}`, this.token)
+  }
+
+
+
 }

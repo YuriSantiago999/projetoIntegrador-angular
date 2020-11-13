@@ -16,3 +16,25 @@
     color:gray;
 }
 
+
+
+
+
+.drop-feed {
+    /* background-color: #ffffff !important; */
+    color: black !important;
+}
+
+
+.btn-outline-dark:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+.btn-outline-dark {
+    border-color: gray !important;
+}
+
+.form-control {
+    border-color: gray !important;
+}
