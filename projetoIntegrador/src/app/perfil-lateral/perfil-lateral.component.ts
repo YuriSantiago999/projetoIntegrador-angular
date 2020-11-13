@@ -30,7 +30,7 @@ export class PerfilLateralComponent implements OnInit {
   }
 
   postar(){
-    this.tema.id= this.idTema
+    this.tema.estado=this.estadoId
     if(this.tema.tema==null || this.tema.categoria==null  ){
       alert('PREENCHA OS CAMPOS CORRETAMENTE')
 
