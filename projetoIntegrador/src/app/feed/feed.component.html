@@ -11,7 +11,7 @@
       <div class="col-md-8">
 
         <!--Campo de Pesquisa-->
-        <nav class="d-flex justify-content-start">
+        <nav class="d-flex justify-content-end">
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab"
               href="#minhas-postagens" role="tab" aria-controls="nav-home" aria-selected="true">Minhas Postagens</a>
@@ -259,13 +259,14 @@
               <div class="col-md-2 pl-0">
                 <button type="button" class="btn btn-outline-warning w-100" (click)='findByEstadoTema()'>Pesquisar</button>
               </div>
-
+            </div>
 
 
               <div class="row ">
                 <div class="col-md-12 " *ngFor='let item of listaTemas | orderBy : key : reverse'>
                   <div *ngFor='let post of item.postagem'>
-                    <div class="card p-2 mb-4 mt-3" >
+                    <div class="card p-2 mb-4
+                    " >
                       <div class="text-right">
                         <button class="btn btn-outline-info border-0 " type="button" id="button-addon2">
                           <fa-icon [icon]="faPen" class="faPen "></fa-icon>
