@@ -22,8 +22,8 @@
 
   <ul class="nav nav-tabs text-right">
   <li class="nav-item dropdown mr-0">
-    <a class="nav-link dropdown-toggle drop-feed" data-toggle="dropdown" href="#" role="tab" aria-haspopup="true" aria-expanded="false">Filtro</a>
-    <div class="dropdown-menu btn ">
+    <a class="nav-link dropdown-toggle drop-feed " data-toggle="dropdown"  role="button" aria-haspopup="true" href="#" aria-expanded="false">Filtro</a>
+    <div class="dropdown-menu ">
       <a class="dropdown-item" id="nav-profile-tab" data-toggle="tab" role="tab" href="#minhas-postagens">Postagem</a>
       <a class="dropdown-item" id="nav-profile-tab" data-toggle="tab" role="tab" href="#postagens-temas">Tema</a>
       <a class="dropdown-item" id="nav-profile-tab" data-toggle="tab"  role="tab" href="#postagens-estados">Estado</a>
@@ -33,15 +33,20 @@
   </ul>
 
     <div class="tab-content " id="nav-tabContent">
+
+
+
+      
       <div class="tab-pane fade show active" id="minhas-postagens" role="tabpanel"
           aria-labelledby="nav-postagens-tab">
           <div class="row mt-3 mb-3">
               <div class="col-md-12 pr-0">
                 <div class="input-group">
                   <input class="form-control br" type="text" placeholder="Pesquisar postagem"
-                      aria-label="Pesquisar">
+                      aria-label="Pesquisar" [(ngModel)]='postNome'>
                       <div class="input-group-append">
-                        <button class="btn btn-outline-dark bl" type="button" id="button-addon2">
+                        <button class="btn btn-outline-dark bl" type="button" id="button-addon2"
+                        (click)='findByTituloPostagem()'>
                           <fa-icon [icon]="faSearch" class="faSearch p-1"></fa-icon>
                         </button>
                       </div>
@@ -52,7 +57,7 @@
       </div>
 
       <div class="tab-pane fade" id="postagens-temas" role="tabpanel"
-      aria-labelledby="nav-presenca-tab">
+      aria-labelledby="nav-tema-tab">
 
           <div class="row mt-3 mb-3">
             <div class="col-md-12 pr-0">
@@ -74,7 +79,7 @@
 
 
       <div class="tab-pane fade" id="postagens-estados" role="tabpanel"
-      aria-labelledby="nav-presenca-tab">
+      aria-labelledby="nav-estados-tab">
 
           <div class="row mt-3 mb-3">
             <div class="col-md-12 pr-0">
