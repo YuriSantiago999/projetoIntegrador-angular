@@ -14,6 +14,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
 import { FeedComponent } from './feed/feed.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
+import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
+
+
+ 
+
+
 //import { PostarTemaComponent } from './postar-tema/postar-tema.component';
 
 @NgModule({
@@ -27,6 +33,9 @@ import { PutTemaComponent } from './put-tema/put-tema.component';
     PerfilLateralComponent,
     FeedComponent,
     PutTemaComponent,
+    DeleteTemaComponent,
+    //DeleteTemaComponent
+    
     //PostarTemaComponent
   ],
   imports: [

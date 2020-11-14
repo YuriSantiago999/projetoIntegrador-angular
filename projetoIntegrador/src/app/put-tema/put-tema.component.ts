@@ -4,6 +4,7 @@ import { TemaService } from './../service/tema.service';
 import { Tema } from './../model/Tema';
 import { Component, OnInit } from '@angular/core';
 import { faListAlt, faTimesCircle } from '@fortawesome/free-regular-svg-icons';
+import { getAllStates} from "easy-location-br";
 
 @Component({
   selector: 'app-put-tema',
@@ -15,6 +16,8 @@ export class PutTemaComponent implements OnInit {
   tema: Tema = new Tema()
   faListAlt = faListAlt;
   faTimesCircle = faTimesCircle;
+  estados = [];
+  estadoId: string;
 
 
   constructor(
@@ -36,10 +39,15 @@ export class PutTemaComponent implements OnInit {
     })
   }
 
+  estadoSelecionado(event: any) {
+    this.estadoId = event.target.value;
+  }
+
   atualizar() {
+    this.tema.estado=this.estadoId
     this.temaService.putTema(this.tema).subscribe((resp: Tema) => {
       this.tema = resp
-      this.router.navigate(['sobre-nos'])
+      this.router.navigate(['cadastro-tema'])
       alert('Tema atualizado com sucesso!')
     })
   }

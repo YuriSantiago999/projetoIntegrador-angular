@@ -38,9 +38,16 @@
             <input type="text" class="form-control borderInput" id="categoria" aria-describedby="emailHelp"
             placeholder="Cole o URL da imagem" [(ngModel)]='tema.categoria'>
           </div>
+          
+          <div class="form-group">
+            <label for="ExampleInputNome2">Estado</label>
+            <select class="form-control w-100 borderInput" (change)="estadoSelecionado($event)" [(ngModel)]="estadoId">
+              <option *ngFor="let item of estados" value="{{item.id}}">{{item.name}}</option>
+            </select>
+          </div>
   
          
-        </div>
+        
         <!-- /Campos de postagem -->
   
         <div class="modal-footer d-flex justify-content-center">
