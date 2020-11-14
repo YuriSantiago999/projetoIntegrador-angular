@@ -4,6 +4,7 @@ import { notStrictEqual } from 'assert';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { HomeComponent } from './home/home.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { PutTemaComponent } from './put-tema/put-tema.component';
 
 const routes: Routes = [
   // Ao iniciar o servidor redireciona para a página home
@@ -13,7 +14,11 @@ const routes: Routes = [
   // Rota para a página sobre nós
   { path: 'sobre-nos', component: SobreNosComponent },
   // Rota para a página de cadastro
-  { path: 'cadastrar', component: CadastrarComponent }
+  { path: 'cadastrar', component: CadastrarComponent },
+  // Rota para a página edita tema
+  { path: 'edita-tema/:id', component: PutTemaComponent }
+  
+
   
 ];
 
