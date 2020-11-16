@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import { Postagem } from './../model/Postagem';
+=======
+>>>>>>> cadastrar-tema
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Postagem } from '../model/Postagem';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +17,7 @@ export class PostagemService {
     headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
   }
 
+<<<<<<< HEAD
   getAllPostagens() {
     return this.http.get('http://localhost:8080/postagens', this.token);
   }
@@ -33,4 +38,9 @@ export class PostagemService {
   }
 
   
+=======
+  postPostagem(postagem: Postagem) {
+    return this.http.post('http://localhost:8080/postagens', postagem, this.token)
+  }
+>>>>>>> cadastrar-tema
 }

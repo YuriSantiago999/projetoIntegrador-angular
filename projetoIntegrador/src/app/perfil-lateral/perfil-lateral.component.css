@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
+<<<<<<< HEAD
 
 h5 {
   font-family: 'Space Mono', 'Roboto', Arial, Helvetica, sans-serif;
@@ -52,3 +53,12 @@ label {
 .modal-body {
     margin-left: 10%;
 }
+=======
+.bgModal {
+    background: rgba(2, 129, 116, .8);
+  }
+  .bgModal2 {
+    background: rgba(2, 129, 116, .1);
+    border: none;
+  }
+>>>>>>> cadastrar-tema

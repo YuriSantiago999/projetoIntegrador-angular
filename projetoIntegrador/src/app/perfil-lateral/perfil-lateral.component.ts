@@ -6,6 +6,7 @@ import { faListAlt, faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import { getAllStates} from "easy-location-br";
 import { Postagem } from '../model/Postagem';
 import { faUserCog } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil-lateral',
@@ -13,26 +14,26 @@ import { faUserCog } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./perfil-lateral.component.css']
 })
 export class PerfilLateralComponent implements OnInit {
+  estados = [];
+  estadoId: string;
 
-
-  postagem: Postagem = new Postagem();
-  listaPostagens: Postagem[];
-
-  faUserCog = faUserCog
-  faTimesCircle = faTimesCircle
   faListAlt = faListAlt;
+  faTimesCircle = faTimesCircle;
+  faUserCog = faUserCog;
 
   tema: Tema = new Tema();
   listaTemas: Tema[];
   idTema: number;
 
-  estados = [];
-  estadoId: string;
+
+  postagem: Postagem = new Postagem();
+  listaPostagens: Postagem[];
 
 
   constructor(
     private postagemService: PostagemService,
-    private temaService: TemaService
+    private temaService: TemaService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -40,6 +41,7 @@ export class PerfilLateralComponent implements OnInit {
     this.findAllTemas();
     this.findByIdTema();
   }
+
 
   estadoSelecionado(event: any) {
     this.estadoId = event.target.value;
@@ -78,5 +80,24 @@ export class PerfilLateralComponent implements OnInit {
       this.listaPostagens = resp;
     });
   }
+  postar(){
+    this.tema.estado=this.estadoId
+    if(this.tema.tema==null || this.tema.categoria==null  ){
+      alert('PREENCHA OS CAMPOS CORRETAMENTE')
 
+    }else{
+      this.temaService.postTema(this.tema).subscribe((resp: Tema)=>{
+        this.tema =resp
+        this.router.navigate(["/home"])
+      alert('tema cadastrado com sucesso')
+
+
+
+
+      })
+
+    }
+
+  }
 }
+

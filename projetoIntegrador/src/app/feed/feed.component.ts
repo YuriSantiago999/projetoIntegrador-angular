@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import {faDumpster} from '@fortawesome/free-solid-svg-icons';
 import {faGratipay} from '@fortawesome/free-brands-svg-icons';
 import {faPen} from '@fortawesome/free-solid-svg-icons';
@@ -10,6 +11,10 @@ import {faSearch} from '@fortawesome/free-solid-svg-icons'
 import { Router } from '@angular/router';
 import { Validators } from '@angular/forms';
 
+=======
+import { Tema } from '../model/Tema';
+import { TemaService } from '../service/tema.service';
+>>>>>>> cadastrar-tema
 
 @Component({
   selector: 'app-feed',
@@ -17,7 +22,9 @@ import { Validators } from '@angular/forms';
   styleUrls: ['./feed.component.css']
 })
 export class FeedComponent implements OnInit {
+  
 
+<<<<<<< HEAD
   key =  'data'
   reverse = true
 
@@ -108,5 +115,17 @@ export class FeedComponent implements OnInit {
   // teste curtida
 
 
+=======
+  constructor(
+   
+  ) { }
+
+  ngOnInit(){
+    window.scroll(0,0)
+    
+  }
+
+ 
+>>>>>>> cadastrar-tema
 
 }

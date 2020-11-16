@@ -1,14 +1,11 @@
-
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
   <fa-icon [icon]="faListAlt" class="fa 3x"></fa-icon>
 </button>
-
 <!-- Modal -->
 <div class="modal fade bgModal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content bgModal2">
-
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Nova Publicação
           <fa-icon [icon]="faListAlt"></fa-icon></h5>
@@ -118,3 +115,48 @@
             </div>
         </div>
   </div>
+
+      <div class="modal-body">
+        <!-- Campos de casastro de tema -->
+        <div class="form-group">
+          <label for="ExampleInputNome2">Tema</label>
+          <input type="text" class="form-control borderInput" id="tema" aria-describedby="emailHelp"
+          placeholder="Digite o título do tema..."[(ngModel)]='tema.tema'>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="ExampleInputNome2">Categoria</label>
+              <input type="text" class="form-control borderInput" id="categoria" aria-describedby="emailHelp"
+              placeholder="Digite uma categoria"[(ngModel)]='tema.categoria'>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="ExampleInputNome2">Estado</label>
+              <select class="form-control w-100 borderInput" (change)="estadoSelecionado($event)" [(ngModel)]="estadoId">
+                <option *ngFor="let item of estados" value="{{item.id}}">{{item.name}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!--div class="form-group">
+          <label for="ExampleInputNome2">Link Externo</label>
+          <input type="text" class="form-control borderInput" id="linkExterno" aria-describedby="emailHelp"
+          placeholder="Cole o URL externo">
+        </div>
+        <div class="form-group">
+          <label for="ExampleInputNome2">Link Imagem</label>
+          <input type="text" class="form-control borderInput" id="linkImagem" aria-describedby="emailHelp"
+          placeholder="Cole o URL da imagem">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Postagem</label>
+          <textarea class="form-control borderInput" id="exampleFormControlTextarea1" rows="3"
+          placeholder="Escreva seu post"[(ngModel)]="tema.postagem"></textarea>
+        </div-->
+      </div>
+      <!-- /Campos de postagem -->
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-success" data-dismiss="modal"(click)='postar()'>Postar</button>
+      </div>
