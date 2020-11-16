@@ -15,16 +15,16 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
- 
 
 
-  faSearch = faSearch
+
+  faSearch = faSearch;
 
 
   constructor(
     public auth: AuthService,
     private router: Router
- 
+
   ) { }
 
   ngOnInit(): void {

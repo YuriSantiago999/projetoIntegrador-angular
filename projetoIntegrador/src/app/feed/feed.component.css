@@ -3,8 +3,8 @@
 }
 
 .card {
-    border-radius: 20px !important; 
-    
+    border-radius: 20px !important;
+
 }
 
 .texto {
@@ -40,3 +40,60 @@
     border-color: gray !important;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+
+h5 {
+  font-family: 'Space Mono', 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 24px;
+
+  font-weight: bold;
+  color: #ffffff;
+}
+
+label {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.borderInput {
+  border: 1px solid  #76E27C;
+}
+
+.bgModal {
+  background: rgba(2, 129, 116, .8);
+}
+
+.bgModal2 {
+  background: rgba(2, 129, 116, .1);
+  border: none;
+}
+
+.form-control {
+    border: 1px solid #76E27C;
+}
+
+/* .btn {
+
+    background-color: #22C401;
+    color: #ffffff;
+    width: 150px;
+    font-weight: bold;
+
+
+} */
+
+
+.borda {
+  background-color: #a3f1a3;
+  width: 100%;
+  height: 10%;
+  padding-top: 10px;
+  border-radius: 50px;
+}
+
+.icons {
+    font-size: 40px;
+    margin-left: 280px;
+}

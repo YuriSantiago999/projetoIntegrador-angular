@@ -1,11 +1,12 @@
 import { TemaService } from './../service/tema.service';
 import { PostagemService } from './../service/postagem.service';
 import { Tema } from './../model/Tema';
-import { Component, OnInit } from '@angular/core'
-import { faListAlt, faTimesCircle } from '@fortawesome/free-regular-svg-icons';
+import { Component, OnInit } from '@angular/core';
+import { faListAlt, faTimesCircle, faPlusSquare } from '@fortawesome/free-regular-svg-icons';
 import { getAllStates} from "easy-location-br";
 import { Postagem } from '../model/Postagem';
 import { faUserCog } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil-lateral',
@@ -13,33 +14,34 @@ import { faUserCog } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./perfil-lateral.component.css']
 })
 export class PerfilLateralComponent implements OnInit {
+  estados = [];
+  estadoId: string;
 
+  faListAlt = faListAlt;
+  faTimesCircle = faTimesCircle;
+  faUserCog = faUserCog;
+  faPlusSquare = faPlusSquare;
 
   postagem: Postagem = new Postagem();
   listaPostagens: Postagem[];
-
-  faUserCog = faUserCog
-  faTimesCircle = faTimesCircle
-  faListAlt = faListAlt;
 
   tema: Tema = new Tema();
   listaTemas: Tema[];
   idTema: number;
 
-  estados = [];
-  estadoId: string;
-
-
   constructor(
     private postagemService: PostagemService,
-    private temaService: TemaService
+    private temaService: TemaService,
+    private router: Router
   ) { }
 
   ngOnInit() {
     this.estados = getAllStates();
     this.findAllTemas();
     this.findByIdTema();
+    this.findAllPostagens();
   }
+
 
   estadoSelecionado(event: any) {
     this.estadoId = event.target.value;
@@ -57,7 +59,7 @@ export class PerfilLateralComponent implements OnInit {
         this.postagem = new Postagem();
         alert('Postagem realizada com sucesso!');
         this.findAllPostagens();
-      })
+      });
     }
   }
 
@@ -79,4 +81,20 @@ export class PerfilLateralComponent implements OnInit {
     });
   }
 
+  postar(){
+    this.tema.estado=this.estadoId
+    if(this.tema.tema==null || this.tema.categoria==null  ){
+      alert('PREENCHA OS CAMPOS CORRETAMENTE');
+
+    }else{
+      this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
+        this.tema = resp;
+        this.router.navigate(['/home']);
+        alert('tema cadastrado com sucesso');
+      });
+
+    }
+
+  }
 }
+

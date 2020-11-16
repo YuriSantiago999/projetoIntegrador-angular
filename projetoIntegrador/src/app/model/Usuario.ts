@@ -6,4 +6,5 @@ export class Usuario {
   public email: string;
   public senha: string;
   public postagem: Postagem[];
+  public imagem: string;
 }

@@ -14,7 +14,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
 import { FeedComponent } from './feed/feed.component';
+import { PutTemaComponent } from './put-tema/put-tema.component';
+import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 
+import { PutDadosPessoaisComponent } from './put-dados-pessoais/put-dados-pessoais.component';
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,12 @@ import { FeedComponent } from './feed/feed.component';
     CadastrarComponent,
     NavbarComponent,
     PerfilLateralComponent,
-    FeedComponent
+    FeedComponent,
+    PutTemaComponent,
+    DeleteTemaComponent,
+    PutDadosPessoaisComponent,
+    PutPostagemComponent,
+    DeletePostagemComponent
   ],
   imports: [
     BrowserModule,

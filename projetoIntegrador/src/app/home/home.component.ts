@@ -23,8 +23,11 @@ export class HomeComponent implements OnInit {
   entrar() {
     this.authService.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
       this.usuarioLogin = resp;
-      console.log("oi");
       localStorage.setItem('token', this.usuarioLogin.token);
+      localStorage.setItem('nome', this.usuarioLogin.nome);
+      localStorage.setItem('email', this.usuarioLogin.email);
+      localStorage.setItem('imagem', this.usuarioLogin.imagem);
+      localStorage.setItem('id', String(this.usuarioLogin.id) );
       this.router.navigate(['/feed']);
     });
   }
