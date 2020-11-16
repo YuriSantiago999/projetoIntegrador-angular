@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 <<<<<<< HEAD
@@ -62,3 +63,38 @@ label {
     border: none;
   }
 >>>>>>> cadastrar-tema
+=======
+
+
+.borda {
+    
+    background-color: #a3f1a3;
+    width: 400px;
+    height: 270px;
+
+    margin-top: 150px;
+    margin-left: 100px;
+    padding: 10px;
+
+    border-radius: 50px;
+
+}
+
+.icons {
+    font-size: 40px;
+    margin-left: 280px;
+}
+
+
+.card {
+    margin-left: 50px;
+}
+
+h5 {
+    text-decoration: underline #22C401;
+}
+p {
+    text-decoration: underline #22C401;    
+}
+
+>>>>>>> perfilLateral

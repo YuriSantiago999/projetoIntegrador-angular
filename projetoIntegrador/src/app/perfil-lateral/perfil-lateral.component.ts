@@ -2,7 +2,7 @@ import { TemaService } from './../service/tema.service';
 import { PostagemService } from './../service/postagem.service';
 import { Tema } from './../model/Tema';
 import { Component, OnInit } from '@angular/core'
-import { faListAlt, faTimesCircle } from '@fortawesome/free-regular-svg-icons';
+import { faListAlt, faTimesCircle, faPlusSquare } from '@fortawesome/free-regular-svg-icons';
 import { getAllStates} from "easy-location-br";
 import { Postagem } from '../model/Postagem';
 import { faUserCog } from '@fortawesome/free-solid-svg-icons';
@@ -20,6 +20,7 @@ export class PerfilLateralComponent implements OnInit {
   faListAlt = faListAlt;
   faTimesCircle = faTimesCircle;
   faUserCog = faUserCog;
+  faPlusSquare = faPlusSquare;
 
   tema: Tema = new Tema();
   listaTemas: Tema[];
@@ -88,7 +89,7 @@ export class PerfilLateralComponent implements OnInit {
     }else{
       this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
         this.tema = resp;
-        this.router.navigate(["/home"]);
+        this.router.navigate(['/home']);
         alert('tema cadastrado com sucesso');
       });
 
