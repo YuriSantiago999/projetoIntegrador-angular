@@ -14,10 +14,11 @@ import { getAllStates} from "easy-location-br";
 export class PutTemaComponent implements OnInit {
 
   tema: Tema = new Tema()
-  faListAlt = faListAlt;
-  faTimesCircle = faTimesCircle;
   estados = [];
   estadoId: string;
+  faListAlt = faListAlt;
+  faTimesCircle = faTimesCircle;
+  
 
 
   constructor(
