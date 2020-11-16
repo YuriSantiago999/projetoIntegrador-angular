@@ -23,8 +23,17 @@
               href="#postagens-estado" role="tab" aria-controls="nav-profile" aria-selected="false">Postagens por
               estado</a>
 
-          </div>
-        </nav>
+            <div class="col-md-8 mb-2">
+              <div class="card p-2 " *ngFor='let item of listaPostagens'>
+                <div class="text-right">
+                  <button class="btn btn-outline-info border-0 " type="button" id="button-addon2" [routerLink]="['/edita-post', item.id]">
+                    <fa-icon [icon]="faPen" class="faPen "></fa-icon>
+                  </button>
+                  <button class="btn btn-outline-info border-0 " type="button" id="button-addon2" [routerLink]="['/deleta-post', item.id]">
+                    <fa-icon [icon]="faDumpster" class="faDumpster "></fa-icon>
+                  </button>
+                </div>
+        <!-- </nav> -->
 
         <div class="tab-content" id="nav-tabContent">
           <div class="tab-pane fade show active" id="minhas-postagens" role="tabpanel"
@@ -44,7 +53,7 @@
             <!--/Campo de Pesquisa-->
             <div class="row">
               <div class="col-md-12">
-                <div class="card p-2 mb-4" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+                <div class="card p-2 mb-4" *ngFor='let item of listaPostagens'>
                   <div class="text-right">
                     <button class="btn btn-outline-info border-0 " type="button" id="button-addon2">
                       <fa-icon [icon]="faPen" class="faPen "></fa-icon>
@@ -113,21 +122,21 @@
                           Postado em {{item.data }}
                         </small>
                       </div>
-                       
+
                       <div class="col-md-6 d-flex justify-content-end">
                         <span class="mr-2 mt-2 text-danger font-weight-bold">{{item.curtida}}</span>
-                        <button type="checkbox" id="curtiu" class="btn btn-danger ml-2 rounded-circle" data-toggle="button"
-                     >
+                        <button type="checkbox" id="curtiu" class="btn btn-danger ml-2 rounded-circle" data-toggle="button">
                           <fa-icon [icon]="faGratipay" class="faGratipay"></fa-icon>
                         </button>
                       </div>
-              
+
 
 
 
                     </div>
                   </div>
                 </div>
+
 
 
 
@@ -151,8 +160,10 @@
               </div>
             </div>
 
+            <hr>
+
             <div class="row">
-              <div class="col-md-12" *ngFor="let item of listaTemas | orderBy : key : reverse">
+              <div class="col-md-12" *ngFor="let item of listaTemas">
                 <div *ngFor='let post of item.postagem'>
 
                 <div class="card p-2 mb-4" >
@@ -237,6 +248,8 @@
                 </div>
 
 
+            </div>
+            <hr>
 
 
 
@@ -266,7 +279,7 @@
 
 
               <div class="row ">
-                <div class="col-md-12 " *ngFor='let item of listaTemas | orderBy : key : reverse'>
+                <div class="col-md-12 " *ngFor='let item of listaTemas'>
                   <div *ngFor='let post of item.postagem'>
                     <div class="card p-2 mb-4
                     " >
@@ -295,36 +308,36 @@
                             <h5 class="ml-3 texto2">{{item.estado}}</h5>
                           </div>
                         </div>
-  
-  
+
+
                         <hr>
-  
+
                         <div class="row">
-  
+
                           <div class="col-md-6 d-flex justify-content-start">
                             <a href="{{post.linkExterno}}" target="_blank">
                               <h6 class="texto text-info">Link Externo</h6>
                             </a>
                           </div>
-  
+
                           <div class="col-md-6 d-flex justify-content-end">
                             <a href="{{post.imagem}}" target="_blank">
                               <h6 class="texto text-info">Link Imagem</h6>
                             </a>
                           </div>
-  
-  
+
+
                         </div>
                         <hr>
-  
-  
-  
+
+
+
                         <div class="row mb-2">
                           <div class="col-md-12 d-flex justify-content-start">
                             <h5 class="texto">Postagem</h5>
                           </div>
                         </div>
-  
+
                         <div class="border rounded ">
                           <p class="card-text p-2">
                             {{post.postagem}}
@@ -339,21 +352,21 @@
                             </small>
                           </div>
                           <div class="col-md-6 d-flex justify-content-end">
-                            <span class="mr-2 mt-2 text-danger font-weight-bold">{{item.curtida}}</span>
+                            <span class="mr-2 mt-2 text-danger font-weight-bold">{{post.curtida}}</span>
                             <button type="button" class="btn btn-danger rounded-circle" data-toggle="button"
                               aria-pressed="false" autocomplete="off">
                               <fa-icon [icon]="faGratipay" class="faGratipay"></fa-icon>
                             </button>
-  
-  
+
+
                           </div>
                         </div>
                       </div>
                     </div>
-  
+
                     </div>
 
-                
+
 
 
                 </div>
@@ -372,9 +385,7 @@
         </div>
         <!-- /Fedd de Cards -->
       </div>
-    </div>
+    <!-- </div>
   </div>
-<<<<<<< HEAD
-=======
-</div>
->>>>>>> putDadosPessoais
+</div> -->
+

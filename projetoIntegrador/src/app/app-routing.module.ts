@@ -1,3 +1,5 @@
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { notStrictEqual } from 'assert';
@@ -20,24 +22,20 @@ const routes: Routes = [
   // Rota para a página de cadastro
   { path: 'cadastrar', component: CadastrarComponent },
   // Rota para a página feed
-<<<<<<< HEAD
-  { path: 'feed', component: FeedComponent }
-
-=======
+  { path: 'feed', component: FeedComponent },
+  // Rota para a página edita post
+  { path: 'edita-post/:id', component: PutPostagemComponent },
+  // Rota para a página edita post
+  { path: 'deleta-post/:id', component: DeletePostagemComponent },
   // Rota para a página edita tema
   { path: 'edita-tema/:id', component: PutTemaComponent },
   // Rota para deletar Tema
-  { path: 'delete-tema/:id', component: DeleteTemaComponent }
-  
+  { path: 'delete-tema/:id', component: DeleteTemaComponent },
 
-  
->>>>>>> delete-tema
-=======
   { path: 'feed', component: FeedComponent },
   // Rota para modal de dados pessoais
   { path: 'edita-dados/:id', component: PutDadosPessoaisComponent },
 
->>>>>>> putDadosPessoais
 ];
 
 @NgModule({

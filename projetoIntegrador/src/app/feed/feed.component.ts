@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> putDadosPessoais
 import {faDumpster} from '@fortawesome/free-solid-svg-icons';
 import {faGratipay} from '@fortawesome/free-brands-svg-icons';
 import {faPen} from '@fortawesome/free-solid-svg-icons';
@@ -14,10 +10,6 @@ import {faSearch} from '@fortawesome/free-solid-svg-icons'
 import { Router } from '@angular/router';
 import { Validators } from '@angular/forms';
 
-=======
-import { Tema } from '../model/Tema';
-import { TemaService } from '../service/tema.service';
->>>>>>> cadastrar-tema
 
 @Component({
   selector: 'app-feed',
@@ -25,37 +17,21 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./feed.component.css']
 })
 export class FeedComponent implements OnInit {
-  
 
-<<<<<<< HEAD
-  key =  'data'
-  reverse = true
+  key =  'data';
+  reverse = true;
 
   postagem: Postagem = new Postagem();
   listaPostagens: Postagem[];
-  palavra: string
-  
-
-<<<<<<< HEAD
-  
- 
+  palavra: string;
 
   tema: Tema = new Tema();
   listaTemas: Tema[];
-  nomeTema: string
-  estado: string
+  nomeTema: string;
+  estado: string;
 
 
-  faSearch = faSearch
-=======
-  postagem: Postagem = new Postagem();
-  listaPostagens: Postagem[];
-
-  tema: Tema = new Tema();
-  listaTemas: Tema[];
-
-
->>>>>>> putDadosPessoais
+  faSearch = faSearch;
   faDumpster = faDumpster;
   faGratipay = faGratipay;
   faPen = faPen;
@@ -63,22 +39,19 @@ export class FeedComponent implements OnInit {
   constructor(
     private postagemService: PostagemService,
     private temaService: TemaService,
-    
+
     private router: Router
   ) { }
 
   ngOnInit() {
-<<<<<<< HEAD
-      
-    let token = localStorage.getItem('token')
 
-    if(token == null) {
-      this.router.navigate(['/home'])
-      alert('Faça o Login antes de entrar no Feed !!')
+    let token = localStorage.getItem('token');
+
+    if (token == null) {
+      this.router.navigate(['/home']);
+      alert('Faça o Login antes de entrar no Feed !!');
     }
 
-=======
->>>>>>> putDadosPessoais
     window.scroll(0, 0);
 
     this.findAllPostagens();
@@ -108,10 +81,10 @@ export class FeedComponent implements OnInit {
 
   findByNomeTema(){
     if(this.nomeTema === ''){
-      this.findAllTemas()
+      this.findAllTemas();
     }else{
       this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[])=> {
-        this.listaTemas = resp
+        this.listaTemas = resp;
       })
     }
 
@@ -119,29 +92,11 @@ export class FeedComponent implements OnInit {
 
   findByEstadoTema(){
     if(this.estado === ''){
-      this.findAllTemas()
+      this.findAllTemas();
     }else{
-      this.temaService.getByEstadoTema(this.estado).subscribe((resp: Tema[])=> {
-        this.listaTemas = resp
+      this.temaService.getByEstadoTema(this.estado).subscribe((resp: Tema[]) => {
+        this.listaTemas = resp;
       })
     }
   }
-
-
-  // teste curtida
-
-
-=======
-  constructor(
-   
-  ) { }
-
-  ngOnInit(){
-    window.scroll(0,0)
-    
-  }
-
- 
->>>>>>> cadastrar-tema
-
 }
