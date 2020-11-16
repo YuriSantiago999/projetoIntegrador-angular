@@ -83,18 +83,14 @@ export class PerfilLateralComponent implements OnInit {
   postar(){
     this.tema.estado=this.estadoId
     if(this.tema.tema==null || this.tema.categoria==null  ){
-      alert('PREENCHA OS CAMPOS CORRETAMENTE')
+      alert('PREENCHA OS CAMPOS CORRETAMENTE');
 
     }else{
-      this.temaService.postTema(this.tema).subscribe((resp: Tema)=>{
-        this.tema =resp
-        this.router.navigate(["/home"])
-      alert('tema cadastrado com sucesso')
-
-
-
-
-      })
+      this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
+        this.tema = resp;
+        this.router.navigate(["/home"]);
+        alert('tema cadastrado com sucesso');
+      });
 
     }
 
