@@ -1,0 +1,56 @@
+//import { AlertasService } from './../service/alertas.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { TemaService } from './../service/tema.service';
+import { Tema } from './../model/Tema';
+import { Component, OnInit } from '@angular/core';
+import { faListAlt, faTimesCircle } from '@fortawesome/free-regular-svg-icons';
+import { getAllStates} from "easy-location-br";
+
+@Component({
+  selector: 'app-put-tema',
+  templateUrl: './put-tema.component.html',
+  styleUrls: ['./put-tema.component.css']
+})
+export class PutTemaComponent implements OnInit {
+
+  tema: Tema = new Tema()
+  estados = [];
+  estadoId: string;
+  faListAlt = faListAlt;
+  faTimesCircle = faTimesCircle;
+  
+
+
+  constructor(
+    private temaService: TemaService,
+    private router: Router,
+    private route: ActivatedRoute,
+    //private alerta: AlertasService
+  ) { }
+
+  ngOnInit() {
+    window.scroll(0,0)
+    let id: number = this.route.snapshot.params["id"];
+    this.findByIdTema(id);
+  }
+
+  findByIdTema(id: number) {
+    this.temaService.getByIdTema(id).subscribe((resp: Tema) => {
+      this.tema = resp;
+    })
+  }
+
+  estadoSelecionado(event: any) {
+    this.estadoId = event.target.value;
+  }
+
+  atualizar() {
+    this.tema.estado=this.estadoId
+    this.temaService.putTema(this.tema).subscribe((resp: Tema) => {
+      this.tema = resp
+      this.router.navigate(['cadastro-tema'])
+      alert('Tema atualizado com sucesso!')
+    })
+  }
+
+}

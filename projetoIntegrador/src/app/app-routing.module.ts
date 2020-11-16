@@ -6,6 +6,8 @@ import { FeedComponent } from './feed/feed.component';
 
 import { HomeComponent } from './home/home.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { PutTemaComponent } from './put-tema/put-tema.component';
+import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 
 const routes: Routes = [
   // Ao iniciar o servidor redireciona para a página home
@@ -16,9 +18,19 @@ const routes: Routes = [
   { path: 'sobre-nos', component: SobreNosComponent },
   // Rota para a página de cadastro
   { path: 'cadastrar', component: CadastrarComponent },
+<<<<<<< HEAD
   // Rota para a página feed
   { path: 'feed', component: FeedComponent }
 
+=======
+  // Rota para a página edita tema
+  { path: 'edita-tema/:id', component: PutTemaComponent },
+  // Rota para deletar Tema
+  { path: 'delete-tema/:id', component: DeleteTemaComponent }
+  
+
+  
+>>>>>>> delete-tema
 ];
 
 @NgModule({
