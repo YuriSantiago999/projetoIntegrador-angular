@@ -1,12 +1,20 @@
 import { TemaService } from './../service/tema.service';
 import { PostagemService } from './../service/postagem.service';
 import { Tema } from './../model/Tema';
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core'
 import { faListAlt, faTimesCircle, faPlusSquare } from '@fortawesome/free-regular-svg-icons';
 import { getAllStates} from "easy-location-br";
 import { Postagem } from '../model/Postagem';
 import { faUserCog } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
+=======
+import { Component, OnInit } from '@angular/core';
+import { faListAlt, faTimesCircle } from '@fortawesome/free-regular-svg-icons';
+import { getAllStates} from "easy-location-br";
+import { Postagem } from '../model/Postagem';
+import { faUserCog } from '@fortawesome/free-solid-svg-icons';
+>>>>>>> putDadosPessoais
 
 @Component({
   selector: 'app-perfil-lateral',
@@ -17,18 +25,32 @@ export class PerfilLateralComponent implements OnInit {
   estados = [];
   estadoId: string;
 
+<<<<<<< HEAD
   faListAlt = faListAlt;
   faTimesCircle = faTimesCircle;
   faUserCog = faUserCog;
   faPlusSquare = faPlusSquare;
+=======
+
+  postagem: Postagem = new Postagem();
+  listaPostagens: Postagem[];
+
+  faUserCog = faUserCog
+  faTimesCircle = faTimesCircle
+  faListAlt = faListAlt;
+>>>>>>> putDadosPessoais
 
   tema: Tema = new Tema();
   listaTemas: Tema[];
   idTema: number;
 
 
+<<<<<<< HEAD
   postagem: Postagem = new Postagem();
   listaPostagens: Postagem[];
+=======
+  
+>>>>>>> putDadosPessoais
 
 
   constructor(
@@ -81,10 +103,13 @@ export class PerfilLateralComponent implements OnInit {
       this.listaPostagens = resp;
     });
   }
+<<<<<<< HEAD
   postar(){
     this.tema.estado=this.estadoId
     if(this.tema.tema==null || this.tema.categoria==null  ){
       alert('PREENCHA OS CAMPOS CORRETAMENTE');
+=======
+>>>>>>> putDadosPessoais
 
     }else{
       this.temaService.postTema(this.tema).subscribe((resp: Tema) => {

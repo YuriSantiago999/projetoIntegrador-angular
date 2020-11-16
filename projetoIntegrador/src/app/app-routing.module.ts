@@ -5,6 +5,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { FeedComponent } from './feed/feed.component';
 
 import { HomeComponent } from './home/home.component';
+import { PutDadosPessoaisComponent } from './put-dados-pessoais/put-dados-pessoais.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
@@ -18,8 +19,8 @@ const routes: Routes = [
   { path: 'sobre-nos', component: SobreNosComponent },
   // Rota para a página de cadastro
   { path: 'cadastrar', component: CadastrarComponent },
-<<<<<<< HEAD
   // Rota para a página feed
+<<<<<<< HEAD
   { path: 'feed', component: FeedComponent }
 
 =======
@@ -31,6 +32,12 @@ const routes: Routes = [
 
   
 >>>>>>> delete-tema
+=======
+  { path: 'feed', component: FeedComponent },
+  // Rota para modal de dados pessoais
+  { path: 'edita-dados/:id', component: PutDadosPessoaisComponent },
+
+>>>>>>> putDadosPessoais
 ];
 
 @NgModule({

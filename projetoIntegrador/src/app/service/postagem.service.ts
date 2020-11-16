@@ -1,7 +1,9 @@
-<<<<<<< HEAD
 import { Postagem } from './../model/Postagem';
+<<<<<<< HEAD
 =======
 >>>>>>> cadastrar-tema
+=======
+>>>>>>> putDadosPessoais
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Postagem } from '../model/Postagem';
@@ -25,6 +27,7 @@ export class PostagemService {
   postPostagem(postagem: Postagem) {
     return this.http.post('http://localhost:8080/postagens', postagem, this.token);
   }
+<<<<<<< HEAD
 
   putPostagem(postagem: Postagem) {
     return  this.http.put('http://localhost:8080/postagens',postagem, this.token)
@@ -43,4 +46,6 @@ export class PostagemService {
     return this.http.post('http://localhost:8080/postagens', postagem, this.token)
   }
 >>>>>>> cadastrar-tema
+=======
+>>>>>>> putDadosPessoais
 }

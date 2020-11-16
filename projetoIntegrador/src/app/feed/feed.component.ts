@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> putDadosPessoais
 import {faDumpster} from '@fortawesome/free-solid-svg-icons';
 import {faGratipay} from '@fortawesome/free-brands-svg-icons';
 import {faPen} from '@fortawesome/free-solid-svg-icons';
@@ -33,6 +36,7 @@ export class FeedComponent implements OnInit {
   palavra: string
   
 
+<<<<<<< HEAD
   
  
 
@@ -43,6 +47,15 @@ export class FeedComponent implements OnInit {
 
 
   faSearch = faSearch
+=======
+  postagem: Postagem = new Postagem();
+  listaPostagens: Postagem[];
+
+  tema: Tema = new Tema();
+  listaTemas: Tema[];
+
+
+>>>>>>> putDadosPessoais
   faDumpster = faDumpster;
   faGratipay = faGratipay;
   faPen = faPen;
@@ -55,6 +68,7 @@ export class FeedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+<<<<<<< HEAD
       
     let token = localStorage.getItem('token')
 
@@ -63,6 +77,8 @@ export class FeedComponent implements OnInit {
       alert('Faça o Login antes de entrar no Feed !!')
     }
 
+=======
+>>>>>>> putDadosPessoais
     window.scroll(0, 0);
 
     this.findAllPostagens();
