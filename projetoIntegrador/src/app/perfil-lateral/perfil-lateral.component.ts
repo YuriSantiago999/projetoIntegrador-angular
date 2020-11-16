@@ -39,6 +39,7 @@ export class PerfilLateralComponent implements OnInit {
     this.estados = getAllStates();
     this.findAllTemas();
     this.findByIdTema();
+    this.findAllPostagens();
   }
 
 

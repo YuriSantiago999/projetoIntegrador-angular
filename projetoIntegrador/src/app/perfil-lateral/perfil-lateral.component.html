@@ -1,84 +1,15 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 7d1a578ce3d6bdf2b967c7f9472a53ae9538cbeb
->>>>>>> putDadosPessoais
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-  <fa-icon [icon]="faListAlt" class="fa 3x"></fa-icon>
-</button>
-<!-- Modal -->
-<div class="modal fade bgModal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bgModal2">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Nova Publicação
-          <fa-icon [icon]="faListAlt"></fa-icon></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true" class="text-white"><fa-icon [icon]="faTimesCircle"></fa-icon></span>
-        </button>
-      </div>
-
-      <div class="modal-body">
-        <!-- Campos de Postagem -->
-        <div class="form-group">
-          <label for="ExampleInputNome2">Tema</label>
-          <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
-            <option *ngFor='let item of listaTemas' value={{item.id}}>
-              {{item.tema}}
-            </option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="ExampleInputNome2">Link Externo</label>
-          <input type="text" class="form-control borderInput" id="linkExterno" aria-describedby="emailHelp"
-          placeholder="Cole o URL externo" [(ngModel)]='postagem.linkExterno'>
-        </div>
-
-        <div class="form-group">
-          <label for="ExampleInputNome2">Link Imagem</label>
-          <input type="text" class="form-control borderInput" id="linkImagem" aria-describedby="emailHelp"
-          placeholder="Cole o URL da imagem" [(ngModel)]='postagem.imagem'>
-        </div>
-
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Postagem</label>
-          <textarea class="form-control borderInput" id="exampleFormControlTextarea1" rows="3"
-          placeholder="Escreva seu post" [(ngModel)]='postagem.postagem'></textarea>
-        </div>
-      </div>
-      <!-- /Campos de postagem -->
-
-      <div class="modal-footer d-flex justify-content-center">
-        <button type="button" class="btn btn-success" data-dismiss="modal" (click)='publicar()'>Postar</button>
-      </div>
-    </div>
-  </div>
+<div class="borda">
+<div class="w-100 d-flex justify-content-end pr-4">
+  <!-- Botão para acionar modal Cadastro de usuário -->
+  <button type="button" class="btn btn-success w-25" data-toggle="modal" data-target="#ExemploModalCentralizado">
+    <fa-icon [icon]="faUserCog" class="fa 3x"></fa-icon>
+  </button>
 </div>
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
->>>>>>> putDadosPessoais
-<!-- Botão para acionar modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
-    Abrir modal de demonstração
-</button>
 
 <!-- Modal -->
   <div class="modal fade bgModal"  id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content bgModal2" >
+            <div class="modal-content bgModal2">
 
                 <div class="modal-header">
                     <h5 class="modal-title" id="TituloModalCentralizado" >Dados Pessoais <fa-icon [icon] = "faUserCog"></fa-icon></h5>
@@ -133,81 +64,120 @@
             </div>
         </div>
   </div>
-<<<<<<< HEAD
+  <!-- /Modal configurações de usuário -->
 
-      <div class="modal-body">
-        <!-- Campos de casastro de tema -->
-        <div class="form-group">
-          <label for="ExampleInputNome2">Tema</label>
-          <input type="text" class="form-control borderInput" id="tema" aria-describedby=""
-          placeholder="Digite o título do tema..."[(ngModel)]='tema.tema'>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="ExampleInputNome2">Categoria</label>
-              <input type="text" class="form-control borderInput" id="categoria" aria-describedby=""
-              placeholder="Digite uma categoria"[(ngModel)]='tema.categoria'>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="ExampleInputNome2">Estado</label>
-              <select class="form-control w-100 borderInput" (change)="estadoSelecionado($event)" [(ngModel)]="estadoId">
-                <option *ngFor="let item of estados" value="{{item.id}}">{{item.name}}</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <!--div class="form-group">
-          <label for="ExampleInputNome2">Link Externo</label>
-          <input type="text" class="form-control borderInput" id="linkExterno" aria-describedby="emailHelp"
-          placeholder="Cole o URL externo">
-        </div>
-        <div class="form-group">
-          <label for="ExampleInputNome2">Link Imagem</label>
-          <input type="text" class="form-control borderInput" id="linkImagem" aria-describedby="emailHelp"
-          placeholder="Cole o URL da imagem">
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Postagem</label>
-          <textarea class="form-control borderInput" id="exampleFormControlTextarea1" rows="3"
-          placeholder="Escreva seu post"[(ngModel)]="tema.postagem"></textarea>
-        </div-->
-      </div>
-      <!-- /Campos de postagem -->
-      <div class="modal-footer d-flex justify-content-center">
-        <button type="button" class="btn btn-success" data-dismiss="modal"(click)='postar()'>Postar</button>
-      </div>
-  <div class="borda">
-    <button class="btn btn-outline">
-        <fa-icon [icon] = "faUserCog" class="icons text-white"></fa-icon>
-    </button>
     <div class="d-flex justify-content-center">
-
-        <img class=" imgAvatar card-img-top rounded-circle w-75" src="https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/girl_avatar_child_kid-512.png" alt="Imagem de capa do card">
+        <img class=" imgAvatar card-img-top rounded-circle w-50" src="https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/girl_avatar_child_kid-512.png" alt="Imagem de capa do card">
     </div>
-    <div class="card border-0" style="width: 18rem;">
+    <div class="card border-0" >
 
 
-        <div class="card-body">
-          <h5 class="card-title text-center text-monospace">Berenice Fulana</h5>
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+          <h4 class="card-title text-center text-monospace">Berenice Fulana</h4>
           <p class="card-text text-center text-monospace">berenice.fulana@gmail.com</p>
 
-          <button class="btn btn-outline ">
-            <fa-icon [icon] = "faPlusSquare" class="text-greenyellow">
-                <a href="#" class="btn btn-outline "></a>
-            </fa-icon> Novo tema
+          <!-- Botão para acionar modal Novo Tema -->
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalTema">
+            <fa-icon [icon]="faPlusSquare" class="fa 5x"></fa-icon> Novo Tema
           </button>
 
-          <button class="btn btn-outline ">
-            <fa-icon [icon] = "faListAlt" class="text-green">
-                <a href="#" class="btn btn-outline "></a>
-            </fa-icon> Nova postagem
+          <div class="modal fade bgModal"  id="modalTema" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content bgModal2" >
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="TituloModalCentralizado" >Novo Tema <fa-icon [icon] = "faPlusSquare"></fa-icon></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <fa-icon [icon] = "faTimesCircle" class="text-white"></fa-icon>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                      <!-- Campos de casastro de tema -->
+                      <div class="form-group">
+                        <label for="ExampleInputNome2">Tema</label>
+                        <input type="text" class="form-control borderInput" id="tema" aria-describedby=""
+                        placeholder="Digite o título do tema..."[(ngModel)]='tema.tema'>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="ExampleInputNome2">Categoria</label>
+                            <input type="text" class="form-control borderInput" id="categoria" aria-describedby=""
+                            placeholder="Digite uma categoria"[(ngModel)]='tema.categoria'>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="ExampleInputNome2">Estado</label>
+                            <select class="form-control w-100 borderInput" (change)="estadoSelecionado($event)" [(ngModel)]="estadoId">
+                              <option *ngFor="let item of estados" value="{{item.id}}">{{item.name}}</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /Campos de postagem -->
+                    <div class="modal-footer d-flex justify-content-center">
+                      <button type="button" class="btn btn-success" data-dismiss="modal"(click)='postar()'>Postar</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+
+          <!-- Botão Modal Nova Postagem -->
+          <button type="button" class="btn btn-success mt-2" data-toggle="modal" data-target="#exampleModal">
+            <fa-icon [icon]="faListAlt" class="fa 5x"></fa-icon> Nova Publicação
           </button>
+          <!-- Modal -->
+          <div class="modal fade bgModal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content bgModal2">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Nova Publicação
+                    <fa-icon [icon]="faListAlt"></fa-icon></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="text-white"><fa-icon [icon]="faTimesCircle"></fa-icon></span>
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                  <!-- Campos de Postagem -->
+                  <div class="form-group">
+                    <label for="ExampleInputNome2">Tema</label>
+                    <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                      <option *ngFor='let item of listaTemas' value={{item.id}}>
+                        {{item.tema}}
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="ExampleInputNome2">Link Externo</label>
+                    <input type="text" class="form-control borderInput" id="linkExterno" aria-describedby="emailHelp"
+                    placeholder="Cole o URL externo" [(ngModel)]='postagem.linkExterno'>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="ExampleInputNome2">Link Imagem</label>
+                    <input type="text" class="form-control borderInput" id="linkImagem" aria-describedby="emailHelp"
+                    placeholder="Cole o URL da imagem" [(ngModel)]='postagem.imagem'>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Postagem</label>
+                    <textarea class="form-control borderInput" id="exampleFormControlTextarea1" rows="3"
+                    placeholder="Escreva seu post" [(ngModel)]='postagem.postagem'></textarea>
+                  </div>
+                </div>
+                <!-- /Campos de postagem -->
+
+                <div class="modal-footer d-flex justify-content-center">
+                  <button type="button" class="btn btn-success" data-dismiss="modal" (click)='publicar()'>Postar</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
-  </div>
-=======
->>>>>>> putDadosPessoais
+</div>

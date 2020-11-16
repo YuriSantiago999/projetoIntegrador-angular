@@ -10,9 +10,9 @@ import { UsuarioService } from '../service/usuario.service';
   styleUrls: ['./put-dados-pessoais.component.css']
 })
 export class PutDadosPessoaisComponent implements OnInit {
-  
-  dadoPessoal: Usuario = new Usuario()
-  
+
+  dadoPessoal: Usuario = new Usuario();
+
   faTimesCircle = faTimesCircle;
   faUserCog = faUserCog;
 
@@ -23,10 +23,10 @@ export class PutDadosPessoaisComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    
-   } 
-    
-   salvar() {
+
+  }
+
+  salvar() {
     this.dadoPessoal = this.dadoPessoal;
   }
 

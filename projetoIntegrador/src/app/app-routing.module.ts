@@ -23,6 +23,8 @@ const routes: Routes = [
   { path: 'cadastrar', component: CadastrarComponent },
   // Rota para a página feed
   { path: 'feed', component: FeedComponent },
+  // Rota para a página feed
+  { path: 'feed/:id', component: FeedComponent },
   // Rota para a página edita post
   { path: 'edita-post/:id', component: PutPostagemComponent },
   // Rota para a página edita post
@@ -31,11 +33,8 @@ const routes: Routes = [
   { path: 'edita-tema/:id', component: PutTemaComponent },
   // Rota para deletar Tema
   { path: 'delete-tema/:id', component: DeleteTemaComponent },
-
-  { path: 'feed', component: FeedComponent },
   // Rota para modal de dados pessoais
   { path: 'edita-dados/:id', component: PutDadosPessoaisComponent },
-
 ];
 
 @NgModule({

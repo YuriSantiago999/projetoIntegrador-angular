@@ -18,7 +18,7 @@ export class PutTemaComponent implements OnInit {
   estadoId: string;
   faListAlt = faListAlt;
   faTimesCircle = faTimesCircle;
-  
+
 
 
   constructor(
