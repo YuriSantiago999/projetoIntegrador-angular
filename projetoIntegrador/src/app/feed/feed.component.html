@@ -35,7 +35,7 @@
                   aria-label="Pesquisar" [(ngModel)]='palavra'>
               </div>
               <div class="col-md-2 pl-0">
-                <button type="button" class="btn btn-outline-warning w-100"
+                <button type="button" class="btn btn-outline-info w-100"
                   (click)=findByPalavraPostagem()>Pesquisar</button>
               </div>
             </div>
@@ -113,15 +113,18 @@
                           Postado em {{item.data }}
                         </small>
                       </div>
+                       
                       <div class="col-md-6 d-flex justify-content-end">
                         <span class="mr-2 mt-2 text-danger font-weight-bold">{{item.curtida}}</span>
-                        <button type="button" class="btn btn-danger rounded-circle" data-toggle="button"
-                          aria-pressed="false" autocomplete="off">
+                        <button type="checkbox" id="curtiu" class="btn btn-danger ml-2 rounded-circle" data-toggle="button"
+                     >
                           <fa-icon [icon]="faGratipay" class="faGratipay"></fa-icon>
                         </button>
-
-
                       </div>
+              
+
+
+
                     </div>
                   </div>
                 </div>
@@ -143,7 +146,7 @@
                   [(ngModel)]='nomeTema'>
               </div>
               <div class="col-md-2 pl-0">
-                <button type="button" class="btn btn-outline-warning w-100"
+                <button type="button" class="btn btn-outline-info w-100"
                   (click)='findByNomeTema()'>Pesquisar</button>
               </div>
             </div>
@@ -257,7 +260,7 @@
                   [(ngModel)]='estado'>
               </div>
               <div class="col-md-2 pl-0">
-                <button type="button" class="btn btn-outline-warning w-100" (click)='findByEstadoTema()'>Pesquisar</button>
+                <button type="button" class="btn btn-outline-info w-100" (click)='findByEstadoTema()'>Pesquisar</button>
               </div>
             </div>
 

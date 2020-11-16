@@ -8,6 +8,7 @@ import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
 import {faSearch} from '@fortawesome/free-solid-svg-icons'
 import { Router } from '@angular/router';
+import { Validators } from '@angular/forms';
 
 
 @Component({
@@ -23,6 +24,10 @@ export class FeedComponent implements OnInit {
   postagem: Postagem = new Postagem();
   listaPostagens: Postagem[];
   palavra: string
+  
+
+  
+ 
 
   tema: Tema = new Tema();
   listaTemas: Tema[];
@@ -98,6 +103,9 @@ export class FeedComponent implements OnInit {
       })
     }
   }
+
+
+  // teste curtida
 
 
 
