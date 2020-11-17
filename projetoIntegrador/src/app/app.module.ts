@@ -17,6 +17,8 @@ import { FeedComponent } from './feed/feed.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 
+import {HashLocationStrategy , LocationStrategy} from '@angular/common'
+
 import { PutDadosPessoaisComponent } from './put-dados-pessoais/put-dados-pessoais.component';
 import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
@@ -45,7 +47,10 @@ import { DeletePostagemComponent } from './delete-postagem/delete-postagem.compo
     FormsModule,
     OrderModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

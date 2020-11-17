@@ -11,11 +11,11 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   logar(usuarioLogin: UsuarioLogin) {
-    return this.http.post('http://localhost:8080/usuarios/logar', usuarioLogin);
+    return this.http.post('https://reciclamente.herokuapp.com/usuarios/logar', usuarioLogin);
   }
 
   cadastrar(usuario: Usuario) {
-    return this.http.post('http://localhost:8080/usuarios/cadastrar', usuario);
+    return this.http.post('https://reciclamente.herokuapp.com/usuarios/cadastrar', usuario);
   }
 
   navbarOk() {

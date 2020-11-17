@@ -14,30 +14,30 @@ export class PostagemService {
   }
 
   getAllPostagens() {
-    return this.http.get('http://localhost:8080/postagens', this.token);
+    return this.http.get('https://reciclamente.herokuapp.com/postagens', this.token);
   }
 
   getByIdPostagem(id: number) {
-    return this.http.get(`http://localhost:8080/postagens/${id}`, this.token);
+    return this.http.get(`https://reciclamente.herokuapp.com/postagens/${id}`, this.token);
   }
   getByPalavraPostagem(palavra: string) {
-    return this.http.get(`http://localhost:8080/postagens/postagens/${palavra}`, this.token)
+    return this.http.get(`https://reciclamente.herokuapp.com/postagens/postagens/${palavra}`, this.token)
   }
 
   postPostagem(postagem: Postagem) {
-    return this.http.post('http://localhost:8080/postagens', postagem, this.token);
+    return this.http.post('https://reciclamente.herokuapp.com/postagens', postagem, this.token);
   }
 
   putPostagem(postagem: Postagem) {
-    return  this.http.put('http://localhost:8080/postagens',postagem, this.token)
+    return  this.http.put('https://reciclamente.herokuapp.com/postagens',postagem, this.token)
   }
 
   
   getByIdPostagens(id: number){
-    return this.http.get(`http://localhost:8080/postagens/${id}`,this.token)
+    return this.http.get(`https://reciclamente.herokuapp.com/postagens/${id}`,this.token)
   }
 
   deletePostagem(id: number) {
-    return this.http.delete(`http://localhost:8080/postagens/id/${id}`, this.token);
+    return this.http.delete(`https://reciclamente.herokuapp.com/postagens/id/${id}`, this.token);
   }
 }

@@ -14,14 +14,14 @@ export class UsuarioService {
   }
 
   getAllUsuario() {
-    return this.http.get('http://localhost:8080/usuarios', this.token);
+    return this.http.get('https://reciclamente.herokuapp.com/usuarios', this.token);
   }
 
   getByIdUsuario(id: number) {
-    return this.http.get(`http://localhost:8080/usuarios/${id}`, this.token)
+    return this.http.get(`https://reciclamente.herokuapp.com/usuarios/${id}`, this.token)
   }
 
   putUsuario(user: Usuario) {
-    return this.http.put('http://localhost:8080/usuarios', user, this.token);
+    return this.http.put('https://reciclamente.herokuapp.com/usuarios', user, this.token);
   }
 }

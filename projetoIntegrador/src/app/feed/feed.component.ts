@@ -170,7 +170,7 @@ export class FeedComponent implements OnInit {
     }else{
       this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
         this.tema = resp;
-        this.router.navigate(['/home']);
+        this.router.navigate(['/feed']);
         alert('tema cadastrado com sucesso');
       });
 
