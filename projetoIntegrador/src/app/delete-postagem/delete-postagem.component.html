@@ -1,17 +1,9 @@
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalDelete">
-  <fa-icon [icon]="faListAlt" class="fa 3x"></fa-icon>
-</button>
-
-<!-- Modal -->
-<div class="modal fade bgModal" id="exampleModalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bgModal2">
-
+<div class="container-fluid bgModal">
+  <div class="container bgModal2 w-50">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Deletar Post
           <fa-icon [icon]="faListAlt"></fa-icon></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" [routerLink]="['/feed']">
           <span aria-hidden="true" class="text-white"><fa-icon [icon]="faTimesCircle"></fa-icon></span>
         </button>
       </div>
@@ -65,6 +57,5 @@
         <button type="button" class="btn btn-danger" data-dismiss="modal" (click)='btnSim()'>Sim</button>
         <button type="button" class="btn btn-warning" data-dismiss="modal" (click)='btnNao()'>Não</button>
       </div>
-    </div>
   </div>
 </div>

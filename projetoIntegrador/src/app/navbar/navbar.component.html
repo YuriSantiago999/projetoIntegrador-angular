@@ -1,5 +1,5 @@
 <div *ngIf="auth.navbarOk()">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
     <a class="navbar-brand" routerLink="/home"><img class="logo-nav" src="https://i.imgur.com/Dfpw7OV.png" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
@@ -10,18 +10,18 @@
 
         <div *ngIf='auth.btnLogin()'>
         <li class="nav-item ">
-          <a class="nav-link texto text-monospace text-uppercase p-3" routerLink="/home">Home <span class="sr-only">(página atual)</span></a>
+          <a class="nav-link texto  text-uppercase p-3" routerLink="/home">Home <span class="sr-only">(página atual)</span></a>
         </li>
       </div>
         <li class="nav-item">
-          <a class="nav-link texto text-monospace text-uppercase p-3 " routerLink="/feed">Feed</a>
+          <a class="nav-link texto  text-uppercase p-3 " routerLink="/feed">Feed</a>
         </li>
 
 
-        
+
         <div *ngIf='auth.btnSair()'>
         <li class="nav-item">
-          <a class="nav-link texto text-monospace text-uppercase p-3 " (click)='sair()'>Sair</a>
+          <a class="nav-link texto  text-uppercase p-3 " (click)='sair()'>Sair</a>
         </li>
       </div>
 
@@ -46,7 +46,7 @@
 
 
 
-      
+
       <div class="tab-pane fade show active" id="minhas-postagens" role="tabpanel"
           aria-labelledby="nav-postagens-tab">
           <div class="row mt-3 mb-3">
@@ -107,7 +107,7 @@
             </div>
 
           </div>
-        
+
       </div>
 
 

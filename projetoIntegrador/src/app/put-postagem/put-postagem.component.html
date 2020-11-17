@@ -1,55 +1,46 @@
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalPut">
-  <fa-icon [icon]="faListAlt" class="fa 3x"></fa-icon>
-</button>
+<div class="container-fluid bgModal">
+  <div class="container bgModal2 w-50">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Atualizar Post
+        <fa-icon [icon]="faListAlt"></fa-icon></h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" [routerLink]="['/feed']">
+        <span aria-hidden="true" class="text-white"><fa-icon [icon]="faTimesCircle"></fa-icon></span>
+      </button>
+    </div>
 
-<!-- Modal -->
-<div class="modal fade bgModal" id="exampleModalPut" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bgModal2">
-
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Atualizar Post
-          <fa-icon [icon]="faListAlt"></fa-icon></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true" class="text-white"><fa-icon [icon]="faTimesCircle"></fa-icon></span>
-        </button>
+    <div class="modal-body">
+      <!-- Campos de Postagem -->
+      <div class="form-group">
+        <label for="ExampleInputNome2">Tema</label>
+        <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+          <option *ngFor='let item of listaTemas' value={{item.id}}>
+            {{item.tema}}
+          </option>
+        </select>
       </div>
 
-      <div class="modal-body">
-        <!-- Campos de Postagem -->
-        <div class="form-group">
-          <label for="ExampleInputNome2">Tema</label>
-          <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
-            <option *ngFor='let item of listaTemas' value={{item.id}}>
-              {{item.tema}}
-            </option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="ExampleInputNome2">Link Externo</label>
-          <input type="text" class="form-control borderInput" id="linkExterno" aria-describedby="emailHelp"
-          placeholder="Cole o URL externo" [(ngModel)]='postagem.linkExterno'>
-        </div>
-
-        <div class="form-group">
-          <label for="ExampleInputNome2">Link Imagem</label>
-          <input type="text" class="form-control borderInput" id="linkImagem" aria-describedby="emailHelp"
-          placeholder="Cole o URL da imagem" [(ngModel)]='postagem.imagem'>
-        </div>
-
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Postagem</label>
-          <textarea class="form-control borderInput" id="exampleFormControlTextarea1" rows="3"
-          placeholder="Escreva seu post" [(ngModel)]='postagem.postagem'></textarea>
-        </div>
+      <div class="form-group">
+        <label for="ExampleInputNome2">Link Externo</label>
+        <input type="text" class="form-control borderInput" id="linkExterno" aria-describedby="emailHelp"
+        placeholder="Cole o URL externo" [(ngModel)]='postagem.linkExterno'>
       </div>
-      <!-- /Campos de postagem -->
 
-      <div class="modal-footer d-flex justify-content-center">
-        <button type="button" class="btn btn-success" data-dismiss="modal" (click)='atualizar()'>Atualizar</button>
+      <div class="form-group">
+        <label for="ExampleInputNome2">Link Imagem</label>
+        <input type="text" class="form-control borderInput" id="linkImagem" aria-describedby="emailHelp"
+        placeholder="Cole o URL da imagem" [(ngModel)]='postagem.imagem'>
       </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Postagem</label>
+        <textarea class="form-control borderInput" id="exampleFormControlTextarea1" rows="3"
+        placeholder="Escreva seu post" [(ngModel)]='postagem.postagem'></textarea>
+      </div>
+    </div>
+    <!-- /Campos de postagem -->
+
+    <div class="modal-footer d-flex justify-content-center">
+      <button type="button" class="btn btn-success" data-dismiss="modal" (click)='atualizar()'>Atualizar</button>
     </div>
   </div>
 </div>

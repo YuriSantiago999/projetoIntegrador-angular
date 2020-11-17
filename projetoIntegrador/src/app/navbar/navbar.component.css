@@ -1,25 +1,26 @@
 .logo-nav {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
-/* .navbar {
-    background-color: white !important;
-} */
-
 .texto {
-    font-family: 'Space Mono', monospace !important;
+  font-family: 'Space Mono';
+  font-weight: bold;
+  letter-spacing: 4px;
+  transition: .5s;
+}
 
+.texto:hover {
+  color: #76E27C !important;
+  transform: scale(1.5);
+  text-shadow: 2px 2px #0ab68b;
 }
 
 
 .drop-feed {
-    /* background-color: #ffffff !important; */
     color: black !important;
 }
 
-
-
 a {
-    cursor: pointer;
+  cursor: pointer;
 }
