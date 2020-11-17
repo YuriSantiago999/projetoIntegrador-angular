@@ -4,29 +4,27 @@
       <!-- Perfil Lateral -->
       <div class="col-md-4">
         <div class="borda">
-          <div class="w-100 d-flex justify-content-end pr-4">
-            <!-- Botão para acionar modal Cadastro de usuário -->
-            <button type="button" class="btn btn-success w-25" data-toggle="modal" data-target="#ExemploModalCentralizado" [routerLink]="['/feed', idUser]">
-              <fa-icon [icon]="faUserCog" class="fa 3x"></fa-icon>
-            </button>
-          </div>
-
           <!-- Modal -->
             <div class="modal fade bgModal"  id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content bgModal2">
 
                           <div class="modal-header">
-                              <h5 class="modal-title" id="TituloModalCentralizado" >Dados Pessoais <fa-icon [icon] = "faUserCog"></fa-icon></h5>
+                              <h5 class="modal-title titulo-pl" id="TituloModalCentralizado" >Dados Pessoais <fa-icon [icon] = "faUserCog"></fa-icon></h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                   <fa-icon [icon] = "faTimesCircle" class="text-white"></fa-icon>
                               </button>
                           </div>
 
+
+                          
+
+
                           <div class="modal-body">
                               <div class="col-md-10">
                                   <div class="form-group">
-                                      <label class="text-white" for="ExampleInputNome2">Nome</label>
+                                      <label class="text-white 
+                                      label-pl" for="ExampleInputNome2">Nome</label>
                                       <input type="text" class="form-control" id="nome" aria-describedby="emailHelp"
                                       placeholder="Digite seu nome" [(ngModel)]="usuario.nome">
                                   </div>
@@ -35,25 +33,28 @@
 
                               <div class="col-md-10">
                                   <div class="form-group">
-                                      <label class="text-white" for="ExampleInputEmail2">E-mail</label>
+                                      <label class="text-white 
+                                      label-pl" for="ExampleInputEmail2">E-mail</label>
                                       <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
                                       placeholder="Digite seu email" [(ngModel)]="usuario.email">
                                   </div>
                               </div>
 
 
-                              <div class="col-md-9">
+                              <div class="col-md-10">
                                 <div class="form-group">
-                                  <label for="ExampleInputPassword2">Senha</label>
+                                  <label class="
+                                  label-pl" for="ExampleInputPassword2">Senha</label>
                                   <input type="password" class="form-control" id="senha" aria-describedby="emailHelp"
                                   placeholder="Digite sua senha" (input)='conferirSenha($event)' value='{{senha}}'>
                                 </div>
                               </div>
 
 
-                              <div class="col-md-9">
+                              <div class="col-md-10">
                                 <div class="form-group">
-                                  <label for="ExampleInputPassword2">Confirme a senha</label>
+                                  <label class="
+                                  label-pl" for="ExampleInputPassword2">Confirme a senha</label>
                                   <input type="password" class="form-control" id="senha2" aria-describedby="emailHelp"
                                   placeholder="Digite sua senha" [(ngModel)]="usuario.senha">
                                 </div>
@@ -63,34 +64,66 @@
 
                           <!-- Botão para salvar -->
                           <div class="modal-footer">
-                              <button type="button" class="btn btn-sucsses" data-dismiss="modal" (click)="atualizarUser()">Salvar</button>
+                              <button type="button" class="btn-pl btn btn-sucsses" data-dismiss="modal" (click)="atualizarUser()">Salvar</button>
                           </div>
 
                       </div>
                   </div>
             </div>
-            <!-- /Modal configurações de usuário -->
 
-              <div class="d-flex justify-content-center">
-                  <img class=" imgAvatar card-img-top rounded-circle w-50" src="{{imagemUser}}" alt="Imagem de capa do card">
-              </div>
+
+
+
+            <!-- /Modal configurações de usuário -->
+        
+
+            <!--Card do perfil - Parte Verde Claro com a foto e botão config-->
               <div class="card border-0" >
+                <div class="row mb-5">
+                  <div class="container borda-pl">
+                  <div class="col-md-12 d-flex justify-content-end">
+                    <button type="button" class="btn-pl-user btn btn-outline-success rounded-circle mb-5" data-toggle="modal" data-target="#ExemploModalCentralizado" [routerLink]="['/feed', idUser]">
+                      <fa-icon [icon]="faUserCog" class="fa-2x faUserCog"></fa-icon>
+                    </button>
+                  </div>
+                  <div class="col-md-12 d-flex justify-content-center ">
+                <img class=" imgAvatar border border-success rounded-circle w-50" src="{{imagemUser}}" alt="Imagem de capa do card">                  
+                </div>
+              </div>
+                </div>
+                
 
 
                   <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                    <h4 class="card-title text-center text-monospace">{{nomeUser}}</h4>
-                    <p class="card-text text-center text-monospace">{{emailUser}}</p>
+                    <h4 class="card-title text-center text-monospace text-uppercase mb-0 titulo-nome">{{nomeUser}}</h4>
+                    <span class="border-bottom  w-100"></span>
+                    <p class="card-text text-center text-monospace pt-3 mb-0 ">{{emailUser}}</p>
+                    <span class="border-bottom  w-100"></span>
 
                     <!-- Botão para acionar modal Novo Tema -->
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalTema">
-                      <fa-icon [icon]="faPlusSquare" class="fa 5x"></fa-icon> Novo Tema
-                    </button>
+                    <div class="row">
+                      <div class="col-md-6 d-flex justify-content-center">
+                        <button type="button" class="btn-pl-nova btn btn-success mt-3" data-toggle="modal" data-target="#modalTema">
+                          <fa-icon [icon]="faPlusSquare" class="fa-3x "></fa-icon>
+                          <p>Novo Tema</p>
+                        </button>
+                          
+                      </div>
+
+                      <div class="col-md-6 d-flex justify-content-center">
+                        <button type="button" class="btn-pl-nova btn btn-success mt-3 " data-toggle="modal" data-target="#exampleModal">
+                          <fa-icon [icon]="faListAlt" class="fa-3x"></fa-icon> 
+                          <p>Nova Publicação</p>
+                        </button>
+                  
+                      </div>
+                    </div>
 
                     <div class="modal fade bgModal"  id="modalTema" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
                       <div class="modal-dialog modal-dialog-centered" role="document">
                           <div class="modal-content bgModal2" >
                               <div class="modal-header">
-                                  <h5 class="modal-title" id="TituloModalCentralizado" >Novo Tema <fa-icon [icon] = "faPlusSquare"></fa-icon></h5>
+                                  <h5 class="modal-title titulo-pl" id="TituloModalCentralizado" >Novo Tema <fa-icon [icon] = "faPlusSquare"></fa-icon></h5>
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <fa-icon [icon] = "faTimesCircle" class="text-white"></fa-icon>
                                   </button>
@@ -98,21 +131,24 @@
                               <div class="modal-body">
                                 <!-- Campos de casastro de tema -->
                                 <div class="form-group">
-                                  <label for="ExampleInputNome2">Tema</label>
+                                  <label class="
+                                  label-pl" for="ExampleInputNome2">Tema</label>
                                   <input type="text" class="form-control borderInput" id="tema" aria-describedby=""
                                   placeholder="Digite o título do tema..."[(ngModel)]='tema.tema'>
                                 </div>
                                 <div class="row">
                                   <div class="col-md-6">
                                     <div class="form-group">
-                                      <label for="ExampleInputNome2">Categoria</label>
+                                      <label class="
+                                      label-pl" for="ExampleInputNome2">Categoria</label>
                                       <input type="text" class="form-control borderInput" id="categoria" aria-describedby=""
                                       placeholder="Digite uma categoria"[(ngModel)]='tema.categoria'>
                                     </div>
                                   </div>
                                   <div class="col-md-6">
                                     <div class="form-group">
-                                      <label for="ExampleInputNome2">Estado</label>
+                                      <label class="
+                                      label-pl" for="ExampleInputNome2">Estado</label>
                                       <select class="form-control w-100 borderInput" (change)="estadoSelecionado($event)" [(ngModel)]="estadoId">
                                         <option *ngFor="let item of estados" value="{{item.id}}">{{item.name}}</option>
                                       </select>
@@ -122,7 +158,7 @@
                               </div>
                               <!-- /Campos de postagem -->
                               <div class="modal-footer d-flex justify-content-center">
-                                <button type="button" class="btn btn-success" data-dismiss="modal"(click)='postar()'>Postar</button>
+                                <button type="button" class="btn-pl btn btn-success" data-dismiss="modal"(click)='postar()'>Postar</button>
                               </div>
                           </div>
                       </div>
@@ -130,15 +166,18 @@
 
 
                     <!-- Botão Modal Nova Postagem -->
-                    <button type="button" class="btn btn-success mt-2" data-toggle="modal" data-target="#exampleModal">
-                      <fa-icon [icon]="faListAlt" class="fa 5x"></fa-icon> Nova Publicação
-                    </button>
+                    
+                     
+                      
+                     
+                    
+                   
                     <!-- Modal -->
                     <div class="modal fade bgModal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content bgModal2">
                           <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Nova Publicação
+                            <h5 class="modal-title titulo-pl" id="exampleModalLabel">Nova Publicação
                               <fa-icon [icon]="faListAlt"></fa-icon></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true" class="text-white"><fa-icon [icon]="faTimesCircle"></fa-icon></span>
@@ -148,7 +187,8 @@
                           <div class="modal-body">
                             <!-- Campos de Postagem -->
                             <div class="form-group">
-                              <label for="ExampleInputNome2">Tema</label>
+                              <label class="
+                              label-pl" for="ExampleInputNome2">Tema</label>
                               <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
                                 <option *ngFor='let item of listaTemas' value={{item.id}}>
                                   {{item.tema}}
@@ -157,19 +197,22 @@
                             </div>
 
                             <div class="form-group">
-                              <label for="ExampleInputNome2">Link Externo</label>
+                              <label class="
+                              label-pl" for="ExampleInputNome2">Link Externo</label>
                               <input type="text" class="form-control borderInput" id="linkExterno" aria-describedby="emailHelp"
                               placeholder="Cole o URL externo" [(ngModel)]='postagem.linkExterno'>
                             </div>
 
                             <div class="form-group">
-                              <label for="ExampleInputNome2">Link Imagem</label>
+                              <label class="
+                              label-pl" for="ExampleInputNome2">Link Imagem</label>
                               <input type="text" class="form-control borderInput" id="linkImagem" aria-describedby="emailHelp"
                               placeholder="Cole o URL da imagem" [(ngModel)]='postagem.imagem'>
                             </div>
 
                             <div class="form-group">
-                              <label for="exampleFormControlTextarea1">Postagem</label>
+                              <label class="
+                              label-pl" for="exampleFormControlTextarea1">Postagem</label>
                               <textarea class="form-control borderInput" id="exampleFormControlTextarea1" rows="3"
                               placeholder="Escreva seu post" [(ngModel)]='postagem.postagem'></textarea>
                             </div>
@@ -177,7 +220,7 @@
                           <!-- /Campos de postagem -->
 
                           <div class="modal-footer d-flex justify-content-center">
-                            <button type="button" class="btn btn-success" data-dismiss="modal" (click)='publicar()'>Postar</button>
+                            <button type="button" class="btn-pl btn btn-success" data-dismiss="modal" (click)='publicar()'>Postar</button>
                           </div>
                         </div>
                       </div>
@@ -191,10 +234,15 @@
       <!-- /Perfil Lateral -->
 
 
+
+
+
+
+
       <!-- Feed de Cards -->
       <div class="col-md-8">
         <!--Campo de Pesquisa-->
-        <nav class="d-flex justify-content-end">
+        <nav class="d-flex justify-content-center">
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab"
               href="#minhas-postagens" role="tab" aria-controls="nav-home" aria-selected="true">Minhas Postagens</a>
@@ -209,14 +257,19 @@
           <div class="tab-pane fade show active" id="minhas-postagens" role="tabpanel"
             aria-labelledby="nav-postagens-tab">
             <div class="row mt-3 mb-3">
-              <div class="col-md-10 pr-0">
-                <input class="form-control w-100" type="search" placeholder="Pesquisar palavra Chave"
-                  aria-label="Pesquisar" [(ngModel)]='palavra'>
+              <div class="col-md-12  ">
+                <div class="input-group">
+                  <input class="form-control br" type="text" placeholder="Pesquisar por palavra chave"
+                      aria-label="Pesquisar" [(ngModel)]='palavra'>
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-dark btn-lupa bl" type="button" id="button-addon2"
+                        (click)='findByPalavraPostagem()'>
+                          <fa-icon [icon]="faSearch" class="faSearch p-1"></fa-icon>
+                        </button>
+                      </div>
+                </div>
               </div>
-              <div class="col-md-2 pl-0">
-                <button type="button" class="btn btn-outline-info w-100"
-                  (click)=findByPalavraPostagem()>Pesquisar</button>
-              </div>
+             
             </div>
             <!--/Campo de Pesquisa-->
             <div class="row">
@@ -281,23 +334,11 @@
                       </div>
 
                       <div class="col-md-6 d-flex justify-content-end">
-<<<<<<< HEAD
-                        <span class="mr-2 mt-2 text-danger font-weight-bold">{{item.curtida}}</span>
-                        <button type="checkbox" id="curtiu" class="btn btn-danger ml-2 rounded-circle"
-                          data-toggle="button">
-                          <fa-icon [icon]="faGratipay" class="faGratipay"></fa-icon>
-                        </button>
-                      </div>
-
-
-
-=======
                         <span class="mr-2 mt-2 text-danger font-weight-bold">{{curtidas}}</span>
                         <button type="checkbox" id="curtiu" class="btn btn-danger ml-2 rounded-circle" data-toggle="button" (click)="curtida()">
                           <fa-icon [icon]="faGratipay" class="faGratipay"></fa-icon>
                         </button>
                       </div>
->>>>>>> c5e0fe074efea6d3488183d7b18ce27462b9f7ad
 
                     </div>
                   </div>
@@ -309,23 +350,24 @@
           <!--Pesquisar Tema-->
           <div class="tab-pane fade mb-2" id="postagens-tema" role="tabpanel" aria-labelledby="nav-presenca-tab">
             <div class="row mt-3 mb-3">
-              <div class="col-md-10 pr-0">
-                <input class="form-control w-100" type="search" placeholder="Pesquisar por tema" aria-label="Pesquisar"
-                  [(ngModel)]='nomeTema'>
-              </div>
-              <div class="col-md-2 pl-0">
-                <button type="button" class="btn btn-outline-info w-100" (click)='findByNomeTema()'>Pesquisar</button>
+              <div class="col-md-12  ">
+                <div class="input-group">
+                  <input class="form-control br" type="text" placeholder="Pesquisar por tema"
+                      aria-label="Pesquisar" [(ngModel)]='nomeTema'>
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-dark btn-lupa bl" type="button" id="button-addon2"
+                        (click)='findByNomeTema()'>
+                          <fa-icon [icon]="faSearch" class="faSearch p-1"></fa-icon>
+                        </button>
+                      </div>
+                </div>
               </div>
             </div>
+            
             <div class="row">
               <div class="col-md-12" *ngFor="let item of listaTemas | orderBy : key : reverse">
                 <div *ngFor='let post of item.postagem'>
-<<<<<<< HEAD
-
-                  <div class="card p-2 mb-4">
-=======
                 <div class="card p-2 mb-4" >
->>>>>>> c5e0fe074efea6d3488183d7b18ce27462b9f7ad
                     <div class="text-right">
                         <button class="btn btn-outline-info border-0 " type="button" id="button-addon2" [routerLink]="['/edita-post', item.id]">
                           <fa-icon [icon]="faPen" class="faPen "></fa-icon>
@@ -401,55 +443,20 @@
 
           <!--Pesquisar Por Estado-->
           <div class="tab-pane fade mb-2" id="postagens-estado" role="tabpanel" aria-labelledby="nav-presenca-tab">
-            <div class="row mt-3 mb-3">
-              <div class="col-md-10 pr-0">
-<<<<<<< HEAD
-                <input class="form-control w-100" type="search" placeholder="Pesquisar por estado"
-                  aria-label="Pesquisar" [(ngModel)]='estado'>
-=======
-                <input class="form-control w-100" type="search" placeholder="Pesquisar pela sigla do estado"
-                  aria-label="Pesquisar"
-                  [(ngModel)]='estado'>
->>>>>>> c5e0fe074efea6d3488183d7b18ce27462b9f7ad
-              </div>
-              <div class="col-md-2 pl-0">
-                <button type="button" class="btn btn-outline-info w-100" (click)='findByEstadoTema()'>Pesquisar</button>
+            <div class="row mt-3 mb-3 ">
+              <div class="col-md-12  ">
+                <div class="input-group">
+                  <input class="form-control br" type="text" placeholder="Pesquisar pela sigla do estado"
+                      aria-label="Pesquisar" [(ngModel)]='estado'>
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-dark btn-lupa bl" type="button" id="button-addon2"
+                        (click)='findByEstadoTema()'>
+                          <fa-icon [icon]="faSearch" class="faSearch p-1"></fa-icon>
+                        </button>
+                      </div>
+                </div>
               </div>
             </div>
-<<<<<<< HEAD
-
-
-            <div class="row ">
-              <div class="col-md-12 " *ngFor='let item of listaTemas | orderBy : key : reverse'>
-                <div *ngFor='let post of item.postagem'>
-                  <div class="card p-2 mb-4
-                    ">
-                    <div class="text-right">
-                      <button class="btn btn-outline-info border-0 " type="button" id="button-addon2">
-                        <fa-icon [icon]="faPen" class="faPen "></fa-icon>
-                      </button>
-                      <button class="btn btn-outline-info border-0 " type="button" id="button-addon2">
-                        <fa-icon [icon]="faDumpster" class="faDumpster "></fa-icon>
-                      </button>
-                    </div>
-                    <div class="card-body mb-2">
-                      <div class="row mb-3">
-                        <div class="col-md-6 d-flex justify-content-start ">
-                          <h4 class="texto">Tema</h4>
-                          <h5 class="ml-3 mt-1 mb-1 texto2">{{item.tema}}</h5>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-6 d-flex justify-content-start">
-                          <h5 class="texto">Categoria </h5>
-                          <h5 class="ml-3 texto2">{{item.categoria}}</h5>
-                        </div>
-                        <div class="col-md-6 d-flex justify-content-end">
-                          <h5 class="texto">Estado </h5>
-                          <h5 class="ml-3 texto2">{{item.estado}}</h5>
-                        </div>
-                      </div>
-=======
               <div class="row ">
                 <div class="col-md-12 " *ngFor='let item of listaTemas | orderBy : key : reverse'>
                   <div *ngFor='let post of item.postagem'>
@@ -534,75 +541,15 @@
                         </div>
                       </div>
                     </div>
->>>>>>> c5e0fe074efea6d3488183d7b18ce27462b9f7ad
 
                     </div>
 
-<<<<<<< HEAD
-                      <hr>
-
-                      <div class="row">
-
-                        <div class="col-md-6 d-flex justify-content-start">
-                          <a href="{{post.linkExterno}}" target="_blank">
-                            <h6 class="texto text-info">Link Externo</h6>
-                          </a>
-                        </div>
-
-                        <div class="col-md-6 d-flex justify-content-end">
-                          <a href="{{post.imagem}}" target="_blank">
-                            <h6 class="texto text-info">Link Imagem</h6>
-                          </a>
-                        </div>
-
-
-                      </div>
-                      <hr>
-
-
-
-                      <div class="row mb-2">
-                        <div class="col-md-12 d-flex justify-content-start">
-                          <h5 class="texto">Postagem</h5>
-                        </div>
-                      </div>
-
-                      <div class="border rounded ">
-                        <p class="card-text p-2">
-                          {{post.postagem}}
-                        </p>
-                      </div>
-                    </div>
-                    <div class="card-footer">
-                      <div class="row">
-                        <div class="col-md-6 d-flex justify-content-start">
-                          <small id="texto" class="form-text mt-4 text-muted  text-monospace">
-                            Postado em {{post.data }}
-                          </small>
-                        </div>
-                        <div class="col-md-6 d-flex justify-content-end">
-                          <span class="mr-2 mt-2 text-danger font-weight-bold">{{item.curtida}}</span>
-                          <button type="button" class="btn btn-danger rounded-circle" data-toggle="button"
-                            aria-pressed="false" autocomplete="off">
-                            <fa-icon [icon]="faGratipay" class="faGratipay"></fa-icon>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-=======
->>>>>>> c5e0fe074efea6d3488183d7b18ce27462b9f7ad
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- /Fedd de Cards -->
       </div>
-      <!-- /Fedd de Cards -->
     </div>
   </div>
-<<<<<<< HEAD
-</div>
-=======
-
->>>>>>> c5e0fe074efea6d3488183d7b18ce27462b9f7ad

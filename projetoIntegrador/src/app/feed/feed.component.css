@@ -16,11 +16,6 @@
     color:gray;
 }
 
-
-
-
-
-
 .drop-feed {
     /* background-color: #ffffff !important; */
     color: black !important;
@@ -36,15 +31,15 @@
     border-color: gray !important;
 }
 
-.form-control {
+.form-control { 
     border-color: gray !important;
 }
 
-
+/*Perfi Lateral*/
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
-
-h5 {
+/*H5*/
+.titulo-pl {
   font-family: 'Space Mono', 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 24px;
 
@@ -52,7 +47,11 @@ h5 {
   color: #ffffff;
 }
 
-label {
+.titulo-nome {
+  font-family: 'Space Mono', 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.label-pl {
   font-weight: bold;
   color: #ffffff;
 }
@@ -74,26 +73,75 @@ label {
     border: 1px solid #76E27C;
 }
 
-/* .btn {
+.btn-pl {
 
     background-color: #22C401;
     color: #ffffff;
-    width: 150px;
+   
     font-weight: bold;
+} 
+
+/*btn UserConfig*/
+.btn-pl-user {
+  background-color: #a3f1a3;
+  border-style: none !important;
+  color: #ffffff;
+}
 
 
-} */
+.btn-pl-user:hover {
+  background-color: #a3f1a3;
 
+}
+/*/Btn UserConfig*/
 
-.borda {
+/*Btn Tema e Postagem do Modal*/
+
+.btn-pl-nova {
+  width:150px; 
+  padding: 2px;
+
+  background-color: #ffffff;
+  color: #47b347;
+  border-style: none;
+  font-weight: bold;
+
+}
+
+.btn-pl-nova:hover {
+  background-color: #a3f1a3;
+  color: white;
+}
+
+/*/ Btn Tema e Postagem do Modal*/
+.borda-pl {
   background-color: #a3f1a3;
   width: 100%;
-  height: 10%;
-  padding-top: 10px;
+  
+  padding-top: 20px;
   border-radius: 50px;
 }
 
-.icons {
-    font-size: 40px;
-    margin-left: 280px;
+.imgAvatar {
+  width: 130px;
+  height: 150px;
+  margin-bottom: -40px !important;
+}
+
+.border-bottom {
+  border-color: #a3f1a3 !important;
+  border-width: 2px !important;
+}
+
+.btn-lupa:hover {
+  color: #47b347 !important;
+ 
+}
+
+.bl {
+  border-left-style: none !important;
+}
+
+.br {
+  border-right-style: none !important;
 }

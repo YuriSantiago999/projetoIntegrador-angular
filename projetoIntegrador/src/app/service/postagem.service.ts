@@ -29,18 +29,12 @@ export class PostagemService {
   }
 
   putPostagem(postagem: Postagem) {
-<<<<<<< HEAD
     return  this.http.put('http://localhost:8080/postagens',postagem, this.token)
   }
-  getByPalavraPostagem(palavra : string) {
-    return this.http.get(`http://localhost:8080/postagens/palavra/${palavra}`, this.token)
-  }
+
   
   getByIdPostagens(id: number){
     return this.http.get(`http://localhost:8080/postagens/${id}`,this.token)
-=======
-    return  this.http.put('http://localhost:8080/postagens', postagem, this.token);
->>>>>>> c5e0fe074efea6d3488183d7b18ce27462b9f7ad
   }
 
   deletePostagem(id: number) {
