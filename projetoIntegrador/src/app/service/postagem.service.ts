@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment.prod';
 import { Postagem } from './../model/Postagem';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -10,7 +11,7 @@ export class PostagemService {
   constructor(private http: HttpClient) { }
 
   token = {
-    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
+    headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
   getAllPostagens() {
@@ -32,7 +33,7 @@ export class PostagemService {
     return  this.http.put('https://reciclamente.herokuapp.com/postagens',postagem, this.token)
   }
 
-  
+
   getByIdPostagens(id: number){
     return this.http.get(`https://reciclamente.herokuapp.com/postagens/${id}`,this.token)
   }

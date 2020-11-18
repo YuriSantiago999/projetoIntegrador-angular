@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment.prod';
 import { Usuario } from './../model/Usuario';
 import { UsuarioService } from './../service/usuario.service';
 import { Component, OnInit } from '@angular/core';
@@ -77,9 +78,9 @@ export class FeedComponent implements OnInit {
   ngOnInit() {
     this.estados = getAllStates();
 
-    let token = localStorage.getItem('token');
+    let token = environment.token;
 
-    if (token == null) {
+    if (token == 'null') {
       this.router.navigate(['/home']);
       this.alert.showAlertInfo('Faça o Login antes de entrar no Feed !!');
     }

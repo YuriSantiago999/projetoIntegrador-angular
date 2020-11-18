@@ -113,7 +113,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/service/auth.service.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/service/auth.service.ts:10</a></div>
                             </td>
                         </tr>
 
@@ -178,8 +178,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="41"
-                            class="link-to-prism">src/app/service/auth.service.ts:41</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/service/auth.service.ts:42</a></div>
                 </td>
             </tr>
 
@@ -217,8 +217,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/app/service/auth.service.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/service/auth.service.ts:31</a></div>
                 </td>
             </tr>
 
@@ -256,8 +256,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="17"
-                            class="link-to-prism">src/app/service/auth.service.ts:17</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="18"
+                            class="link-to-prism">src/app/service/auth.service.ts:18</a></div>
                 </td>
             </tr>
 
@@ -326,8 +326,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">src/app/service/auth.service.ts:13</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/app/service/auth.service.ts:14</a></div>
                 </td>
             </tr>
 
@@ -396,8 +396,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="21"
-                            class="link-to-prism">src/app/service/auth.service.ts:21</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/service/auth.service.ts:22</a></div>
                 </td>
             </tr>
 
@@ -419,7 +419,8 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { UsuarioLogin } from &#x27;../model/UsuarioLogin&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { environment } from &#x27;./../../environments/environment.prod&#x27;;
+import { UsuarioLogin } from &#x27;../model/UsuarioLogin&#x27;;
 import { HttpClient } from &#x27;@angular/common/http&#x27;;
 import { Injectable } from &#x27;@angular/core&#x27;;
 import { Usuario } from &#x27;../model/Usuario&#x27;;
@@ -441,18 +442,18 @@ export class AuthService {
 
   navbarOk() {
     let ok &#x3D; true;
-    let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
-    if (token &#x3D;&#x3D; null) {
+    let token &#x3D; environment.token;
+    if (token &#x3D;&#x3D; &#x27;&#x27;) {
       ok &#x3D; false;
     }
     return ok;
   }
-  
+
   btnSair(){
       let ok &#x3D; false
-      let token &#x3D; localStorage.getItem(&#x27;token&#x27;)
+      let token &#x3D; environment.token;
 
-      if(token !&#x3D; null){
+      if(token !&#x3D; &#x27;&#x27;){
       ok &#x3D; true
       }
 
@@ -462,9 +463,9 @@ export class AuthService {
   btnLogin(){
 
     let ok &#x3D; false
-    let token &#x3D; localStorage.getItem(&#x27;token&#x27;)
+    let token &#x3D; environment.token;
 
-    if(token &#x3D;&#x3D; null){
+    if(token &#x3D;&#x3D; &#x27;&#x27;){
     ok &#x3D; true
     }
 

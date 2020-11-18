@@ -1,6 +1,7 @@
+import { environment } from './../../environments/environment.prod';
 import { AuthService } from './../service/auth.service';
 import { Component, OnInit } from '@angular/core';
-import {faSearch} from '@fortawesome/free-solid-svg-icons'
+import {faSearch} from '@fortawesome/free-solid-svg-icons';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { TemaService } from '../service/tema.service';
@@ -31,8 +32,8 @@ export class NavbarComponent implements OnInit {
   }
 
   sair(){
-    localStorage.clear()
-    this.router.navigate(['/home'])
+    this.router.navigate(['/home']);
+    environment.token = '';
   }
 
 
