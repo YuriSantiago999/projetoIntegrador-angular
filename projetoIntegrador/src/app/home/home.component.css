@@ -1,12 +1,16 @@
 
-body{
+
+.container-fluid {
     background: url('https://i.imgur.com/55jRn7G.jpg') no-repeat fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
-  
+    width: 100%;
+    height: 100vh;
+
+}
+
 
 .form {
     margin-top: 180px;
@@ -39,7 +43,7 @@ a {
 
 
 .btn {
-  
+    margin-left: 25%;
     background-color: #22C401;
     color: #ffffff;
     width: 150px;
