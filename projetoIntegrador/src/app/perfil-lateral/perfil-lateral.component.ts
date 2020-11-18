@@ -1,3 +1,4 @@
+import { AlertasService } from './../service/alertas.service';
 import { TemaService } from './../service/tema.service';
 import { PostagemService } from './../service/postagem.service';
 import { Tema } from './../model/Tema';
@@ -32,7 +33,8 @@ export class PerfilLateralComponent implements OnInit {
   constructor(
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private router: Router
+    private router: Router,
+    private alert: AlertasService
   ) { }
 
   ngOnInit() {
@@ -52,12 +54,12 @@ export class PerfilLateralComponent implements OnInit {
     this.postagem.tema = this.tema;
 
     if (this.postagem.tema == null || this.postagem.postagem == null) {
-      alert('Preencha sua postagem com um tema e conteúdo!');
+      this.alert.showAlertDanger('Preencha sua postagem com um tema e conteúdo!');
     } else {
       this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
         this.postagem = resp;
         this.postagem = new Postagem();
-        alert('Postagem realizada com sucesso!');
+        this.alert.showAlertSuccess('Postagem realizada com sucesso!');
         this.findAllPostagens();
       });
     }
@@ -84,13 +86,13 @@ export class PerfilLateralComponent implements OnInit {
   postar(){
     this.tema.estado=this.estadoId
     if(this.tema.tema==null || this.tema.categoria==null  ){
-      alert('PREENCHA OS CAMPOS CORRETAMENTE');
+      this.alert.showAlertDanger('PREENCHA OS CAMPOS CORRETAMENTE');
 
     }else{
       this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
         this.tema = resp;
         this.router.navigate(['/home']);
-        alert('tema cadastrado com sucesso');
+        this.alert.showAlertSuccess('tema cadastrado com sucesso');
       });
 
     }

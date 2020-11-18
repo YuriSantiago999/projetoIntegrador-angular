@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { OrderModule } from 'ngx-order-pipe';
+import {ModalModule} from 'ngx-bootstrap/modal'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import {HashLocationStrategy , LocationStrategy} from '@angular/common'
 import { PutDadosPessoaisComponent } from './put-dados-pessoais/put-dados-pessoais.component';
 import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { AlertasComponent } from './alertas/alertas.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { DeletePostagemComponent } from './delete-postagem/delete-postagem.compo
     DeleteTemaComponent,
     PutDadosPessoaisComponent,
     PutPostagemComponent,
-    DeletePostagemComponent
+    DeletePostagemComponent,
+    AlertasComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ import { DeletePostagemComponent } from './delete-postagem/delete-postagem.compo
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    OrderModule
+    OrderModule,
+    ModalModule.forRoot()
   ],
   providers: [{
     provide: LocationStrategy,

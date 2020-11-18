@@ -14,6 +14,7 @@ import { Validators } from '@angular/forms';
 import { faListAlt, faTimesCircle, faPlusSquare } from '@fortawesome/free-regular-svg-icons';
 import { faUserCog } from '@fortawesome/free-solid-svg-icons';
 import { getAllStates} from "easy-location-br";
+import { AlertasService } from '../service/alertas.service';
 
 
 
@@ -68,7 +69,9 @@ export class FeedComponent implements OnInit {
     private temaService: TemaService,
     private usuarioService: UsuarioService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alert: AlertasService
+
   ) { }
 
   ngOnInit() {
@@ -78,7 +81,7 @@ export class FeedComponent implements OnInit {
 
     if (token == null) {
       this.router.navigate(['/home']);
-      alert('Faça o Login antes de entrar no Feed !!');
+      this.alert.showAlertInfo('Faça o Login antes de entrar no Feed !!');
     }
 
     window.scroll(0, 0);
@@ -151,12 +154,12 @@ export class FeedComponent implements OnInit {
     this.postagem.tema = this.tema;
 
     if (this.postagem.tema == null || this.postagem.postagem == null) {
-      alert('Preencha sua postagem com um tema e conteúdo!');
+      this.alert.showAlertDanger('Preencha sua postagem com um tema e conteúdo!');
     } else {
       this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
         this.postagem = resp;
         this.postagem = new Postagem();
-        alert('Postagem realizada com sucesso!');
+        this.alert.showAlertSuccess('Postagem realizada com sucesso!');
         this.findAllPostagens();
       });
     }
@@ -165,13 +168,13 @@ export class FeedComponent implements OnInit {
   postar(){
     this.tema.estado=this.estadoId
     if(this.tema.tema==null || this.tema.categoria==null  ){
-      alert('PREENCHA OS CAMPOS CORRETAMENTE');
+      this.alert.showAlertDanger('Preencha os campos corretamente');
 
     }else{
       this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
         this.tema = resp;
         this.router.navigate(['/feed']);
-        alert('tema cadastrado com sucesso');
+        this.alert.showAlertSuccess('tema cadastrado com sucesso');
       });
 
     }
@@ -191,7 +194,7 @@ export class FeedComponent implements OnInit {
   atualizarUser() {
     this.usuarioService.putUsuario(this.usuario).subscribe((resp: Usuario) => {
       this.usuario= resp;
-      alert('Usuário atualizado com sucesso!');
+      this.alert.showAlertSuccess('Usuário atualizado com sucesso!');
       localStorage.clear();
       this.router.navigate(['/home']);
     })
