@@ -38,38 +38,6 @@
 
 
 
-.progress {
-    height: 10px;
-}
-.faFacebook, .faLinkedin, .faInstagram{
-    color: white;
-}
-
-.faFacebook:hover{
-  color: #3b5998;
-}
-
-.faLinkedin:hover{
-color: #0072b1;
-}
-
-.faInstagram:hover{
-color: #C13584;
-}
-.p10{
-
-
-
-    padding: 10px;
-}
-
-
-
-
-
-
-
-
 
 
 
