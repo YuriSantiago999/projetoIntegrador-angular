@@ -177,7 +177,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/navbar/navbar.component.ts:21</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/navbar/navbar.component.ts:22</a></div>
                             </td>
                         </tr>
 
@@ -258,8 +258,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/app/navbar/navbar.component.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/navbar/navbar.component.ts:31</a></div>
                 </td>
             </tr>
 
@@ -297,8 +297,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">src/app/navbar/navbar.component.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/navbar/navbar.component.ts:34</a></div>
                 </td>
             </tr>
 
@@ -341,7 +341,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/navbar/navbar.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/navbar/navbar.component.ts:26</a></div>
                             </td>
                         </tr>
 
@@ -367,7 +367,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/navbar/navbar.component.ts:21</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/navbar/navbar.component.ts:22</a></div>
                             </td>
                         </tr>
 
@@ -380,9 +380,10 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AuthService } from &#x27;./../service/auth.service&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { environment } from &#x27;./../../environments/environment.prod&#x27;;
+import { AuthService } from &#x27;./../service/auth.service&#x27;;
 import { Component, OnInit } from &#x27;@angular/core&#x27;;
-import {faSearch} from &#x27;@fortawesome/free-solid-svg-icons&#x27;
+import {faSearch} from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
 import { Postagem } from &#x27;../model/Postagem&#x27;;
 import { Tema } from &#x27;../model/Tema&#x27;;
 import { TemaService } from &#x27;../service/tema.service&#x27;;
@@ -413,8 +414,8 @@ export class NavbarComponent implements OnInit {
   }
 
   sair(){
-    localStorage.clear()
-    this.router.navigate([&#x27;/home&#x27;])
+    this.router.navigate([&#x27;/home&#x27;]);
+    environment.token &#x3D; &#x27;&#x27;;
   }
 
 

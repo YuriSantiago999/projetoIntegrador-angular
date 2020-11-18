@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment.prod';
 import { UsuarioLogin } from './../model/UsuarioLogin';
 import { Router } from '@angular/router';
 import { AuthService } from './../service/auth.service';
@@ -23,11 +24,11 @@ export class HomeComponent implements OnInit {
   entrar() {
     this.authService.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
       this.usuarioLogin = resp;
-      localStorage.setItem('token', this.usuarioLogin.token);
-      localStorage.setItem('nome', this.usuarioLogin.nome);
-      localStorage.setItem('email', this.usuarioLogin.email);
-      localStorage.setItem('imagem', this.usuarioLogin.imagem);
-      localStorage.setItem('id', String(this.usuarioLogin.id) );
+      environment.token = this.usuarioLogin.token;
+      environment.nome = this.usuarioLogin.nome;
+      environment.email = this.usuarioLogin.email;
+      environment.imagem = this.usuarioLogin.imagem;
+      environment.id = String(this.usuarioLogin.id);
       this.router.navigate(['/feed']);
     });
   }
