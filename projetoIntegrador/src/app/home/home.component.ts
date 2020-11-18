@@ -25,10 +25,10 @@ export class HomeComponent implements OnInit {
     this.authService.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
       this.usuarioLogin = resp;
       environment.token = this.usuarioLogin.token;
-      environment.nome = this.usuarioLogin.nome;
-      environment.email = this.usuarioLogin.email;
-      environment.imagem = this.usuarioLogin.imagem;
-      environment.id = String(this.usuarioLogin.id);
+      localStorage.setItem('nome', this.usuarioLogin.nome);
+      localStorage.setItem('email', this.usuarioLogin.email);
+      localStorage.setItem('imagem', this.usuarioLogin.imagem);
+      localStorage.setItem('id', String(this.usuarioLogin.id));
       this.router.navigate(['/feed']);
     });
   }
