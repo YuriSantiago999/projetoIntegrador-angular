@@ -1,14 +1,16 @@
-<div class="container-fluid bgModal">
-  <div class="container bgModal2 w-50">
-    <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLabel">Atualizar Post
+<div class="container-fluid bgModal  border-0">
+  <div class="container bgModal2 border-0">
+      <div class="modal-dialog modal-dialog-centered border-0" role="document">
+          <div class="modal-content border-0">
+    <div class="modal-header bgModal border-0">
+      <h5 class="modal-title " id="exampleModalLabel">Atualizar Post
         <fa-icon [icon]="faListAlt"></fa-icon></h5>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close" [routerLink]="['/feed']">
         <span aria-hidden="true" class="text-white"><fa-icon [icon]="faTimesCircle"></fa-icon></span>
       </button>
     </div>
 
-    <div class="modal-body">
+    <div class="modal-body bgModal border-0">
       <!-- Campos de Postagem -->
       <div class="form-group">
         <label for="ExampleInputNome2">Tema</label>
@@ -39,8 +41,10 @@
     </div>
     <!-- /Campos de postagem -->
 
-    <div class="modal-footer d-flex justify-content-center">
+    <div class="modal-footer d-flex justify-content-center bgModal border-0">
       <button type="button" class="btn btn-success" data-dismiss="modal" (click)='atualizar()'>Atualizar</button>
     </div>
   </div>
+</div>
+</div>
 </div>
