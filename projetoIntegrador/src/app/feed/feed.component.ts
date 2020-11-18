@@ -27,10 +27,10 @@ export class FeedComponent implements OnInit {
 
   usuario: Usuario = new Usuario();
 
-  nomeUser= localStorage.getItem("nome");
-  emailUser= localStorage.getItem("email");
-  imagemUser= localStorage.getItem("imagem");
-  idUser= Number(localStorage.getItem("id"));
+  nomeUser= environment.nome;
+  emailUser= environment.email;
+  imagemUser= environment.imagem;
+  idUser= Number(environment.id);
 
   estados = [];
   estadoId: string;
