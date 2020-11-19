@@ -24,3 +24,7 @@ label {
   background: rgba(2, 129, 116, .1);
   border: none;
 }
+
+.texto-black {
+  color: black;
+}
