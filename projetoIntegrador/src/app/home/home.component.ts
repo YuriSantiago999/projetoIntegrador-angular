@@ -3,6 +3,7 @@ import { UsuarioLogin } from './../model/UsuarioLogin';
 import { Router } from '@angular/router';
 import { AuthService } from './../service/auth.service';
 import { Component, OnInit } from '@angular/core';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private alert: AlertasService
   ) { }
 
   ngOnInit() {
@@ -30,6 +32,11 @@ export class HomeComponent implements OnInit {
       localStorage.setItem('imagem', this.usuarioLogin.imagem);
       localStorage.setItem('id', String(this.usuarioLogin.id));
       this.router.navigate(['/feed']);
+    },
+    err =>{
+      if (err.status == '500') {
+        this.alert.showAlertDanger('Login e senha incorretos')
+      }
     });
   }
 
