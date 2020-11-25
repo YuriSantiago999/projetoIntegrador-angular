@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
     },
     err =>{
       if (err.status == '500') {
-        this.alert.showAlertDanger('Login e senha incorretos')
+        this.alert.showAlertDanger('E-mail e senha incorretos')
       }
     });
   }
